@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIDE FEDERATION WATER MAYOTTE – Dossier de Projet</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #0B1623;
+  --navy-2:     #122035;
+  --navy-3:     #1A2E48;
+  --gold:       #C9933A;
+  --gold-light: #E8B45A;
+  --gold-subtle:#FDF6EC;
+  --white:      #ffffff;
+  --paper:      #F8F9FB;
+  --gray-100:   #F1F5F9;
+  --gray-200:   #E2E8F0;
+  --gray-400:   #94A3B8;
+  --gray-500:   #64748B;
+  --gray-700:   #334155;
+  --text:       #0F172A;
+  --red:        #C0392B;
+  --teal:       #0D9488;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #d4d8de;
+  color: var(--text);
+}
+
+@page { size: A4; margin: 0; }
+
+/* ─── PAGE ─────────────────────────────────────────────────── */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── NAV HEADER ─────────────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  height: 44px;
+  background: rgba(11,22,35,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.page-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.page-header img { height: 26px; width: auto; }
+.page-header .divider {
+  width: 1px; height: 18px;
+  background: rgba(255,255,255,0.14);
+}
+.page-header .doc-title {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+}
+.page-header .section-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(201,147,58,0.12);
+  border: 1px solid rgba(201,147,58,0.2);
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+/* ─── PAGE FOOTER ─────────────────────────────────────────────── */
+.page-footer {
+  height: 32px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  flex-shrink: 0;
+}
+.page-footer span {
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.25);
+}
+.page-footer .pn {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* ─── CONTENT AREA ─────────────────────────────────────────────── */
+.content {
+  flex: 1;
+  padding: 22px 26px 18px;
+  overflow: hidden;
+}
+
+/* ─── EYEBROW ─────────────────────────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.eyebrow-bar { width: 20px; height: 1px; background: var(--gold); }
+.eyebrow-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ─── SECTION TITLES ─────────────────────────────────────────── */
+h1.st {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+h1.st span { color: var(--gold); }
+h2.st {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+h2.st span { color: var(--gold); }
+h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 12px 0 5px;
+  letter-spacing: -0.01em;
+}
+h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy-3);
+  margin: 7px 0 4px;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
+p {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: 7px;
+}
+p strong { color: var(--navy); font-weight: 700; }
+ul { padding-left: 14px; margin-bottom: 7px; }
+ul li {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-bottom: 3px;
+  line-height: 1.55;
+}
+ul li::marker { color: var(--gold); }
+ol { padding-left: 16px; margin-bottom: 7px; }
+ol li {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+  line-height: 1.55;
+}
+ol li::marker { color: var(--gold); font-weight: 700; }
+ol li strong { color: var(--navy); }
+
+/* ─── DATA CARDS (website style) ─────────────────────────────── */
+.data-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.data-card-label { font-size: 11px; color: var(--gray-500); line-height: 1.4; max-width: 70%; }
+.data-card-val {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+.data-card-val.red   { color: var(--red); }
+.data-card-val.gold  { color: var(--gold); }
+.data-card-val.navy  { color: var(--navy); }
+.data-card-val.green { color: #059669; }
+
+/* ─── ENJEU CARDS ─────────────────────────────────────────────── */
+.enjeu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--gray-200);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.enjeu-card {
+  background: white;
+  padding: 18px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.enjeu-num {
+  position: absolute;
+  top: 10px; right: 12px;
+  font-size: 44px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.04);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.enjeu-icon {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  background: var(--gray-100);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.enjeu-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.enjeu-body {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  line-height: 1.55;
+}
+.enjeu-stat {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: -0.03em;
+}
+.enjeu-stat-lbl {
+  font-size: 9px;
+  color: var(--gray-400);
+  margin-top: 1px;
+}
+
+/* ─── STAT HERO CARDS ─────────────────────────────────────────── */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+.hero-stat {
+  padding: 0 0 0 18px;
+  border-left: 1px solid rgba(255,255,255,0.07);
+}
+.hero-stat:first-child { padding-left: 0; border-left: none; }
+.hero-stat-val {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-stat-val.red  { color: #E74C3C; }
+.hero-stat-val.gold { color: var(--gold-light); }
+.hero-stat-desc {
+  font-size: 10px;
+  color: rgba(255,255,255,0.32);
+  line-height: 1.5;
+}
+
+/* ─── REP CARDS (dark) ─────────────────────────────────────────── */
+.rep-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+.rep-card-tag {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.rep-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+.rep-role {
+  font-size: 11px;
+  color: var(--gold-light);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.rep-desc {
+  font-size: 11px;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.6;
+}
+
+/* ─── QUOTE ─────────────────────────────────────────────────── */
+.quote-block {
+  border-left: 3px solid var(--gold);
+  padding: 8px 14px;
+  margin: 10px 0;
+  background: var(--gold-subtle);
+  border-radius: 0 8px 8px 0;
+}
+.quote-block p {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.65;
+}
+.quote-block cite {
+  display: block;
+  font-size: 10px;
+  color: var(--gray-400);
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ─── BOX VARIANTS ─────────────────────────────────────────── */
+.box {
+  background: var(--paper);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 11px 14px;
+  margin-bottom: 8px;
+}
+.box.gold-bg {
+  background: var(--gold-subtle);
+  border-color: rgba(201,147,58,0.2);
+}
+.box.teal-bg {
+  background: #f0fdfa;
+  border-color: rgba(13,148,136,0.2);
+}
+.box.navy-bg {
+  background: var(--navy);
+  border-color: transparent;
+}
+.box.navy-bg p { color: rgba(255,255,255,0.7); }
+.box.navy-bg strong { color: var(--gold-light); }
+.box p { margin-bottom: 3px; font-size: 0.78rem; }
+.box p:last-child { margin-bottom: 0; }
+.box h4 { margin-top: 0; margin-bottom: 5px; }
+
+/* ─── CALLOUT (dark) ─────────────────────────────────────────── */
+.callout {
+  background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 100%);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 10px 0;
+}
+.callout p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.65;
+}
+.callout strong { color: var(--gold-light); }
+
+/* ─── DARK SECTION ─────────────────────────────────────────── */
+.dark-section {
+  background: linear-gradient(155deg, #06101A 0%, #0D1E33 60%, #0F2240 100%);
+  position: relative;
+  overflow: hidden;
+}
+.dark-section::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -80px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,86,219,0.18) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+.dark-section::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,147,58,0.15) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.dark-section .content { position: relative; z-index: 1; }
+.dark-section h1.st,
+.dark-section h2.st,
+.dark-section h3 {
+  color: white;
+}
+.dark-section h1.st span,
+.dark-section h2.st span { color: var(--gold-light); }
+.dark-section p { color: rgba(255,255,255,0.5); }
+.dark-section p strong { color: var(--gold-light); }
+.dark-section ul li { color: rgba(255,255,255,0.55); }
+.dark-section ul li::marker { color: var(--gold); }
+.dark-section ol li { color: rgba(255,255,255,0.55); }
+.dark-section ol li strong { color: white; }
+
+/* ─── PHASE BLOCKS ─────────────────────────────────────────── */
+.phase-block {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+}
+.phase-header.p1 { background: linear-gradient(90deg, #06101A, #0D2A4A); }
+.phase-header.p2 { background: linear-gradient(90deg, #0D2A4A, var(--navy-3)); }
+.phase-header.p3 { background: linear-gradient(90deg, var(--navy-3), #0D6B5E); }
+.phase-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.12);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.phase-info { flex: 1; }
+.phase-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+}
+.phase-period {
+  font-size: 9.5px;
+  color: rgba(255,255,255,0.42);
+  margin-top: 2px;
+}
+.phase-tag {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(201,147,58,0.15);
+  border: 1px solid rgba(201,147,58,0.22);
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.phase-body {
+  padding: 12px 14px;
+  background: white;
+}
+.phase-body p { font-size: 0.78rem; margin-bottom: 5px; }
+.phase-body ul li { font-size: 0.76rem; }
+
+/* ─── TABLE ─────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 0.74rem;
+}
+thead tr { background: var(--navy); }
+thead th {
+  padding: 7px 10px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+tbody tr:nth-child(even) { background: var(--paper); }
+tbody tr:nth-child(odd) { background: white; }
+tbody td {
+  padding: 6px 10px;
+  vertical-align: top;
+  line-height: 1.4;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+.td-label { font-weight: 700; color: var(--navy); }
+tfoot tr { background: var(--gray-100); }
+tfoot td {
+  padding: 7px 10px;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.78rem;
+}
+
+/* ─── TIMELINE ─────────────────────────────────────────────── */
+.timeline { position: relative; padding-left: 18px; margin: 8px 0; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 5px; top: 8px; bottom: 8px;
+  width: 1px; background: var(--gray-200);
+}
+.tl-item { position: relative; margin-bottom: 10px; padding-left: 14px; }
+.tl-item::before {
+  content: '';
+  position: absolute; left: -13px; top: 5px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid white;
+  box-shadow: 0 0 0 1.5px var(--gold);
+}
+.tl-item.blue::before { background: var(--navy-3); box-shadow: 0 0 0 1.5px var(--navy-3); }
+.tl-item.teal::before { background: var(--teal); box-shadow: 0 0 0 1.5px var(--teal); }
+.tl-date {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+.tl-item.blue .tl-date { color: var(--navy-3); }
+.tl-item.teal .tl-date { color: var(--teal); }
+.tl-text { font-size: 0.77rem; color: var(--gray-500); line-height: 1.5; }
+
+/* ─── RISK BADGES ─────────────────────────────────────────── */
+.risk-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.risk-high { background: #fee2e2; color: #b91c1c; }
+.risk-med  { background: #fef3c7; color: #92400e; }
+.risk-low  { background: #dcfce7; color: #166534; }
+
+/* ─── PARTNER GRID ─────────────────────────────────────────── */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 8px 0;
+}
+.partner-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+.partner-card .p-type {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+.partner-card .p-name {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.partner-card .p-role {
+  font-size: 10px;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+/* ─── COLS ─────────────────────────────────────────────────── */
+.cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+/* ─── SECTION DIVIDER ─────────────────────────────────────── */
+.sec-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 10px;
+}
+.sec-div::before, .sec-div::after {
+  content: ''; flex: 1; height: 1px; background: var(--gray-200);
+}
+.sec-div span {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+/* ─── COVER PAGE ─────────────────────────────────────────── */
+.cover-page {
+  min-height: 297mm;
+  background: linear-gradient(155deg, #06101A 0%, #0D1E33 45%, #0F2240 100%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.cover-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+.cover-blob-1 {
+  position: absolute; top: -140px; right: -90px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,86,219,0.22) 0%, transparent 70%);
+  filter: blur(80px);
+}
+.cover-blob-2 {
+  position: absolute; bottom: -80px; left: -80px;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,147,58,0.18) 0%, transparent 70%);
+  filter: blur(70px);
+}
+.cover-blob-3 {
+  position: absolute; top: 45%; right: 18%;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 70%);
+  filter: blur(50px);
+}
+.cover-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  position: relative; z-index: 2;
+}
+.cover-nav img { height: 36px; width: auto; }
+.cover-nav .onu-logo { height: 30px; opacity: 0.7; }
+.cover-body {
+  flex: 1;
+  padding: 14px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; z-index: 2;
+}
+.cover-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.cover-eyebrow-line { width: 24px; height: 1px; background: var(--gold); }
+.cover-eyebrow-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.cover-h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+.cover-h1 em { font-style: normal; color: var(--gold-light); }
+.cover-sub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.4);
+  max-width: 52ch;
+  line-height: 1.75;
+  margin-bottom: 26px;
+}
+.cover-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 28px;
+}
+.cover-pill {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.cover-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.cover-meta-item label {
+  display: block;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 3px;
+}
+.cover-meta-item p {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+.cover-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  position: relative; z-index: 2;
+}
+.cover-footer p {
+  font-size: 9px;
+  color: rgba(255,255,255,0.22);
+  margin: 0;
+}
+.cover-footer .gold { color: var(--gold); font-weight: 700; }
+
+/* ─── BUDGET BAR ─────────────────────────────────────────── */
+.budget-bar {
+  display: flex;
+  gap: 3px;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.budget-bar-seg { height: 100%; border-radius: 2px; }
+
+/* ─── PRINT ─────────────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     PAGE 1 — COUVERTURE
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="cover-page">
+    <div class="cover-grid-bg"></div>
+    <div class="cover-blob-1"></div>
+    <div class="cover-blob-2"></div>
+    <div class="cover-blob-3"></div>
+
+    <div class="cover-nav">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <img src="logo-aide-onu.png" alt="ONU" class="onu-logo" onerror="this.style.opacity='0'">
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-eyebrow">
+        <div class="cover-eyebrow-line"></div>
+        <span class="cover-eyebrow-text">Dossier de Projet Humanitaire · 2025 – 2027</span>
+      </div>
+
+      <div class="cover-h1">
+        AIDE FEDERATION<br><em>WATER MAYOTTE</em>
+      </div>
+
+      <p class="cover-sub">
+        Programme d'accès à l'eau potable et de résilience hydrique pour les populations vulnérables de Mayotte — modèle écologique, solidaire et réplicable à l'international.
+      </p>
+
+      <div class="cover-pills">
+        <span class="cover-pill">Urgence humanitaire</span>
+        <span class="cover-pill">Distribution solidaire</span>
+        <span class="cover-pill">Résilience hydrique</span>
+        <span class="cover-pill">Zéro plastique</span>
+        <span class="cover-pill">Pilote Mayotte</span>
+        <span class="cover-pill">ODD 6</span>
+      </div>
+
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <label>Porteur de projet</label>
+          <p>AIDE Fédération</p>
+        </div>
+        <div class="cover-meta-item">
+          <label>Territoire pilote</label>
+          <p>Mayotte, France</p>
+        </div>
+        <div class="cover-meta-item">
+          <label>Durée programme</label>
+          <p>24 mois (phases 1–2)</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val red">30%</div>
+            <div class="hero-stat-desc">de la population sans accès régulier à l'eau potable</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val gold">320 K</div>
+            <div class="hero-stat-desc">habitants, dont une majorité en précarité hydrique</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val" style="color:white;">77%</div>
+            <div class="hero-stat-desc">taux de pauvreté — 1er rang européen</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val" style="color:#10B981;">25 K</div>
+            <div class="hero-stat-desc">personnes visées dès la Phase 1 du programme</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <p>Document confidentiel — Usage institutionnel — <span class="gold">AIDE Fédération © 2025</span></p>
+      <p>Version 1.0 — Juin 2025</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 2 — RÉSUMÉ EXÉCUTIF
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Résumé Exécutif</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Section 01</span></div>
+    <h1 class="st">Résumé <span>Exécutif</span></h1>
+
+    <div class="callout">
+      <p><strong>AIDE FEDERATION WATER MAYOTTE</strong> est un programme humanitaire structuré pour garantir l'accès à une eau potable sûre, abordable et écologiquement responsable aux populations vulnérables de Mayotte. Conçu comme un pilote territorial avant déploiement international, il articule urgence humanitaire, distribution solidaire locale et résilience hydrique durable.</p>
+    </div>
+
+    <div class="enjeu-grid" style="margin:12px 0; grid-template-columns: repeat(4,1fr);">
+      <div class="enjeu-card">
+        <span class="enjeu-num">01</span>
+        <div class="enjeu-stat red">101e</div>
+        <div class="enjeu-stat-lbl">département français avec les pires indicateurs eau en Europe</div>
+      </div>
+      <div class="enjeu-card">
+        <span class="enjeu-num">02</span>
+        <div class="enjeu-stat red">30%</div>
+        <div class="enjeu-stat-lbl">de la population sans accès régulier à l'eau potable à domicile</div>
+      </div>
+      <div class="enjeu-card">
+        <span class="enjeu-num">03</span>
+        <div class="enjeu-stat" style="color:var(--navy)">320K</div>
+        <div class="enjeu-stat-lbl">habitants sous pression démographique et hydrique croissante</div>
+      </div>
+      <div class="enjeu-card">
+        <span class="enjeu-num">04</span>
+        <div class="enjeu-stat" style="color:var(--gold)">77%</div>
+        <div class="enjeu-stat-lbl">taux de pauvreté — le plus élevé de la République française</div>
+      </div>
+    </div>
+
+    <h3>Problématique centrale</h3>
+    <p>Mayotte souffre d'une crise structurelle de l'eau : réseaux vétustes, coupures récurrentes (parfois plusieurs jours), saturation des infrastructures sous pression démographique, vulnérabilité aux sécheresses. Des dizaines de milliers de familles — notamment dans les bidonvilles — n'ont aucun accès fiable à l'eau potable, exposant enfants et nourrissons à des risques sanitaires graves, et contraignant les ménages à acheter de l'eau en bouteille plastique à des coûts disproportionnés.</p>
+
+    <h3>Réponse en trois phases</h3>
+    <div class="cols-3" style="margin:8px 0;">
+      <div class="box">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Phase 1 · M1–M6</div>
+        <h4>Urgence humanitaire</h4>
+        <p>Distribution directe d'eau potable en conditionnement carton (type Tetra Pak) aux ménages les plus vulnérables — 25 000 personnes ciblées.</p>
+      </div>
+      <div class="box gold-bg">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Phase 2 · M7–M18</div>
+        <h4>Eau solidaire locale</h4>
+        <p>10 points de distribution pérennes cogérés avec des acteurs locaux, approvisionnement en circuit court, 60 000 personnes couvertes.</p>
+      </div>
+      <div class="box teal-bg">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px;">Phase 3 · M19–M24+</div>
+        <h4>Résilience hydrique</h4>
+        <p>Infrastructures de collecte, micro-stations de purification, comités locaux de l'eau, formation techniciens, capitalisation du modèle.</p>
+      </div>
+    </div>
+
+    <div class="cols-2" style="margin-top:4px;">
+      <div class="box navy-bg">
+        <p><strong>Budget pilote 24 mois :</strong> environ <strong>1 485 000 €</strong> (fourchette 1,2 M€ – 1,8 M€ selon la logistique retenue). Mobilisable auprès de l'UE (ECHO/FEDER), de l'État, du Département, de fondations privées et de mécènes d'entreprise.</p>
+      </div>
+      <div class="quote-block" style="margin:0;">
+        <p>« L'eau n'est pas un privilège. C'est un droit fondamental. À Mayotte, ce droit est bafoué chaque jour pour des dizaines de milliers de personnes. Ce programme est une réponse concrète, durable et humaine. »</p>
+        <cite>— AIDE Fédération, porteur du projet</cite>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">02</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 3 — CONTEXTE MAYOTTE
+══════════════════════════════════════════════ -->
+<div class="page dark-section">
+  <div class="page-header" style="background:rgba(6,16,26,0.98);">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Contexte &amp; Justification</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Section 02 — Contexte</span></div>
+    <h1 class="st">Mayotte &amp; la <em style="font-style:normal;color:var(--gold-light);">crise de l'eau</em></h1>
+
+    <p>Mayotte, 101e département français depuis 2011, présente des indicateurs socio-économiques parmi les plus dégradés de France : taux de pauvreté supérieur à 77 %, densité extrême (830 hab/km²), croissance démographique non maîtrisée et déficits structurels majeurs en infrastructures publiques.</p>
+
+    <div class="enjeu-grid" style="margin:10px 0;">
+      <div class="enjeu-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+        <span class="enjeu-num" style="color:rgba(255,255,255,0.04);">01</span>
+        <div class="enjeu-title" style="color:white;">Coupures systématiques</div>
+        <div class="enjeu-body">Rationnement par alternance — eau disponible 1 à 2 jours sur 3. Coupures pouvant durer plusieurs jours consécutifs dans certains secteurs.</div>
+        <div class="enjeu-stat">1j/2</div>
+        <div class="enjeu-stat-lbl" style="color:rgba(255,255,255,0.28);">fréquence moyenne de distribution effective</div>
+      </div>
+      <div class="enjeu-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+        <span class="enjeu-num" style="color:rgba(255,255,255,0.04);">02</span>
+        <div class="enjeu-title" style="color:white;">Réseau vétuste &amp; saturé</div>
+        <div class="enjeu-body">Stations de traitement sous-dimensionnées, canalisations dégradées. Les fuites sur le réseau représentent plus de 30 % de la production totale d'eau traitée.</div>
+        <div class="enjeu-stat red">30%+</div>
+        <div class="enjeu-stat-lbl" style="color:rgba(255,255,255,0.28);">de pertes sur le réseau de distribution</div>
+      </div>
+      <div class="enjeu-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+        <span class="enjeu-num" style="color:rgba(255,255,255,0.04);">03</span>
+        <div class="enjeu-title" style="color:white;">Bidonvilles non raccordés</div>
+        <div class="enjeu-body">40 % de la population réside dans des habitats informels sans raccordement. Ces ménages dépendent entièrement de revendeurs informels ou de sources non contrôlées.</div>
+        <div class="enjeu-stat red">40%</div>
+        <div class="enjeu-stat-lbl" style="color:rgba(255,255,255,0.28);">de la population sans raccordement réseau</div>
+      </div>
+    </div>
+
+    <div class="cols-2" style="margin-top:4px;">
+      <div>
+        <h3>Risque sanitaire documenté</h3>
+        <p>La consommation d'eau non potable ou stockée dans de mauvaises conditions génère des maladies diarrhéiques, des gastro-entérites et des risques de choléra — particulièrement graves pour les enfants et nourrissons. L'ARS Océan Indien alerte régulièrement sur les pics de pathologies liées à l'eau.</p>
+        <div class="data-card" style="margin-top:8px;">
+          <span class="data-card-label">Vulnérabilité aux sécheresses (saison sèche avril–novembre)</span>
+          <span class="data-card-val red">+7 mois</span>
+        </div>
+        <div class="data-card" style="margin-top:5px;">
+          <span class="data-card-label">Coût moyen eau en bouteille plastique (% du revenu familial)</span>
+          <span class="data-card-val gold">15–20%</span>
+        </div>
+      </div>
+      <div>
+        <h3>Le plastique : un faux recours</h3>
+        <p>Face aux défaillances du réseau, de nombreuses familles achètent de l'eau en bouteille plastique à des coûts disproportionnés. Ce recours génère une pollution plastique considérable dans un archipel marin fragile, et consomme une part inacceptable du budget des ménages les plus précaires.</p>
+
+        <div class="sec-div" style="margin:8px 0 6px;"><span>Justification — Section 03</span></div>
+        <h3>Pourquoi AIDE Fédération ?</h3>
+        <ul style="margin:0;">
+          <li>Urgence sanitaire avérée dans un département de la République française</li>
+          <li>Absence de réponse directe adaptée aux ménages les plus précaires</li>
+          <li>Éligibilité documentée aux financements UE, État, Nations Unies (ODD 6)</li>
+          <li>Modèle innovant, hybride et scalable à l'international</li>
+          <li>Légitimité institutionnelle d'AIDE Fédération comme ONG internationale reconnue</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer" style="background:rgba(6,16,26,0.98);">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">03</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 4 — OBJECTIFS & BÉNÉFICIAIRES
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Objectifs &amp; Bénéficiaires</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 04 – 06</span></div>
+    <h1 class="st">Objectifs &amp; <span>Publics bénéficiaires</span></h1>
+
+    <div class="callout">
+      <p><strong>Objectif général :</strong> Contribuer à l'amélioration durable de l'accès à l'eau potable pour les populations vulnérables de Mayotte, en posant les bases d'un modèle de résilience hydrique écologique, communautaire et réplicable.</p>
+    </div>
+
+    <h3>Objectifs spécifiques</h3>
+    <ol style="margin-top:6px;">
+      <li><strong>OS1 — Urgence :</strong> Distribuer de l'eau potable à au moins <strong>5 000 ménages vulnérables</strong> (≈ 25 000 personnes) dès les 6 premiers mois, via conditionnement carton sans plastique.</li>
+      <li><strong>OS2 — Accessibilité :</strong> Ouvrir au moins <strong>10 points de distribution solidaire</strong> permanents dans les zones sous-desservies, à partir du 7e mois.</li>
+      <li><strong>OS3 — Écologie :</strong> Réduire la consommation de bouteilles plastique de 50 % dans les zones d'intervention à M24, documentée par des indicateurs de suivi.</li>
+      <li><strong>OS4 — Autonomie locale :</strong> Soutenir <strong>3 structures locales</strong> (associations, coopératives, entrepreneurs sociaux) capables de gérer durablement la distribution.</li>
+      <li><strong>OS5 — Résilience :</strong> Installer <strong>5 dispositifs</strong> de captage, stockage ou purification dans les communautés prioritaires.</li>
+      <li><strong>OS6 — Modèle :</strong> Publier un rapport de capitalisation complet pour la réplication nationale et internationale.</li>
+    </ol>
+
+    <div class="sec-div"><span>Bénéficiaires</span></div>
+
+    <div class="cols-3">
+      <div class="box">
+        <h4>Bénéficiaires directs prioritaires</h4>
+        <ul style="padding-left:12px;margin:0;">
+          <li>Ménages en bidonvilles et habitats informels non raccordés</li>
+          <li>Femmes chefs de ménage en grande précarité</li>
+          <li>Enfants 0–5 ans, vulnérables aux pathologies hydriques</li>
+          <li>Personnes âgées et en situation de handicap</li>
+          <li>Structures d'accueil collectives</li>
+        </ul>
+      </div>
+      <div class="box gold-bg">
+        <h4>Bénéficiaires secondaires</h4>
+        <ul style="padding-left:12px;margin:0;">
+          <li>Établissements scolaires en zones en tension hydrique</li>
+          <li>Centres de santé et dispensaires communautaires</li>
+          <li>Crèches et centres maternels</li>
+          <li>Associations locales partenaires de la distribution</li>
+          <li>Micro-entrepreneurs intégrés dans la chaîne logistique</li>
+        </ul>
+      </div>
+      <div class="box teal-bg">
+        <h4>Bénéficiaires indirects</h4>
+        <ul style="padding-left:12px;margin:0;">
+          <li>Ensemble de la population mahoraise (réduction des tensions liées à l'eau)</li>
+          <li>Collectivités déchargées d'une partie de la pression sociale</li>
+          <li>Environnement naturel : réduction de la pollution plastique littorale</li>
+          <li>Autres territoires en crise : modèle capitalisé réplicable</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box navy-bg" style="margin-top:6px;">
+      <p><strong>Cibles chiffrées :</strong> 25 000 personnes en accès direct dès la Phase 1 · 60 000 à l'issue de la Phase 2 · 100 000+ bénéficiant de l'amélioration structurelle à l'issue de la Phase 3</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">04</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 5 — DESCRIPTION & PHASES
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Description &amp; Phases Opérationnelles</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 07 – 08</span></div>
+    <h1 class="st">Description du programme &amp; <span>3 phases</span></h1>
+
+    <p>Le programme repose sur un modèle hybride articulant trois horizons complémentaires — réponse d'urgence, offre solidaire pérenne, autonomie hydrique durable — avec pour fil conducteur : <strong>zéro plastique</strong>, <strong>ancrage territorial fort</strong> et <strong>traçabilité de l'impact</strong>.</p>
+
+    <div class="phase-block" style="margin-top:10px;">
+      <div class="phase-header p1">
+        <span class="phase-num">01</span>
+        <div class="phase-info">
+          <div class="phase-title">URGENCE HUMANITAIRE — Distribution immédiate</div>
+          <div class="phase-period">Mois 1 à 6 · Budget estimé : 300 000 – 450 000 €</div>
+        </div>
+        <span class="phase-tag">Urgence</span>
+      </div>
+      <div class="phase-body">
+        <p><strong>Objectif :</strong> Répondre immédiatement aux besoins en eau potable des ménages les plus vulnérables sans attendre des infrastructures pérennes.</p>
+        <ul>
+          <li>Cartographie des zones prioritaires avec services sociaux, associations et communes.</li>
+          <li>Eau potable certifiée en cartons recyclables (1 L ou 5 L), acheminée depuis des fournisseurs certifiés.</li>
+          <li>Distribution directe aux ménages enregistrés, suivi hebdomadaire terrain.</li>
+          <li>Formation de volontaires locaux et mise en place d'une hotline d'accompagnement.</li>
+          <li>Lancement de la campagne de communication nationale et internationale.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header p2">
+        <span class="phase-num">02</span>
+        <div class="phase-info">
+          <div class="phase-title">EAU SOLIDAIRE LOCALE — Distribution structurée &amp; circuit court</div>
+          <div class="phase-period">Mois 7 à 18 · Budget estimé : 500 000 – 750 000 €</div>
+        </div>
+        <span class="phase-tag">Solidaire</span>
+      </div>
+      <div class="phase-body">
+        <p><strong>Objectif :</strong> Ancrer durablement le programme dans le territoire via les acteurs locaux et les circuits courts d'approvisionnement.</p>
+        <ul>
+          <li>10 points de distribution solidaire fixes, gérés en partenariat avec des associations ou coopératives locales.</li>
+          <li>Exploration et mise en place d'un approvisionnement local ou régional (Réunion, Comores, Océan Indien).</li>
+          <li>Montée en compétences des opérateurs locaux (logistique, hygiène, suivi bénéficiaires).</li>
+          <li>Contribution symbolique pour les ménages qui le peuvent (0,05–0,10 €/L) alimentant un fonds solidaire local.</li>
+          <li>Évaluation intermédiaire et ajustement du dispositif.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header p3">
+        <span class="phase-num">03</span>
+        <div class="phase-info">
+          <div class="phase-title">RÉSILIENCE HYDRIQUE — Infrastructures &amp; autonomie durable</div>
+          <div class="phase-period">Mois 19 à 24+ · Budget estimé : 400 000 – 600 000 €</div>
+        </div>
+        <span class="phase-tag">Résilience</span>
+      </div>
+      <div class="phase-body">
+        <p><strong>Objectif :</strong> Réduire structurellement la dépendance aux crises hydriques en investissant dans des solutions locales de production et stockage.</p>
+        <ul>
+          <li>Systèmes de collecte et stockage des eaux pluviales dans les quartiers ciblés.</li>
+          <li>Micro-stations de purification adaptées (filtration, UV, osmose inverse selon contexte).</li>
+          <li>Formation de techniciens locaux à la maintenance des équipements.</li>
+          <li>Structuration de comités locaux de l'eau (gouvernance communautaire).</li>
+          <li>Rapport de capitalisation pour la réplication nationale et internationale.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">05</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 6 — MODÈLE OPÉRATIONNEL & ÉCONOMIQUE
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Modèles Opérationnel &amp; Économique</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 09 – 10</span></div>
+    <h1 class="st">Modèles opérationnel <span>&amp; économique</span></h1>
+
+    <div class="cols-2">
+      <div>
+        <h3>Structure de pilotage</h3>
+        <div class="data-card" style="margin-bottom:5px;">
+          <span class="data-card-label">Coordinateur de programme dédié basé à Mayotte</span>
+          <span class="data-card-val navy">×1</span>
+        </div>
+        <div class="data-card" style="margin-bottom:5px;">
+          <span class="data-card-label">Agents de terrain recrutés localement</span>
+          <span class="data-card-val gold">3–5</span>
+        </div>
+        <div class="data-card" style="margin-bottom:8px;">
+          <span class="data-card-label">Comité de suivi trimestriel (porteur + financeurs + bénéficiaires)</span>
+          <span class="data-card-val navy">×4/an</span>
+        </div>
+
+        <h3>Logistique &amp; approvisionnement</h3>
+        <ul>
+          <li><strong>Phase 1 :</strong> Approvisionnement depuis métropole ou La Réunion, conditionnement carton certifié alimentaire.</li>
+          <li><strong>Phase 2 :</strong> Négociation d'un approvisionnement régional (Comores, Madagascar, La Réunion) ou local.</li>
+          <li>Stockage en entrepôts certifiés alimentaires loués localement.</li>
+          <li>Traçabilité complète de la chaîne jusqu'au bénéficiaire final.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Conditionnement écologique</h3>
+        <div class="box teal-bg">
+          <p>Le programme fait le choix délibéré du <strong>conditionnement en carton recyclable</strong> (type Tetra Pak ou équivalent biosourcé), fondé sur :</p>
+          <ul style="padding-left:12px;margin-top:5px;">
+            <li>Empreinte carbone inférieure par litre distribué</li>
+            <li>Recyclabilité du carton dans les conditions locales</li>
+            <li>Message symbolique fort : refus du plastique</li>
+            <li>Alignement avec les engagements UE/ONU (ODD 12)</li>
+          </ul>
+        </div>
+
+        <h3>Suivi &amp; redevabilité</h3>
+        <ul>
+          <li>Enregistrement numérique des ménages bénéficiaires (outil mobile léger).</li>
+          <li>Suivi mensuel : litres distribués, ménages touchés, incidents sanitaires.</li>
+          <li>Enquêtes de satisfaction semestrielles.</li>
+          <li>Rapport d'activité trimestriel aux financeurs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-div"><span>Modèle économique — Section 10</span></div>
+    <p style="margin-bottom:8px;">Modèle hybride à trois niveaux, conçu pour garantir la soutenabilité financière sans dénaturer la vocation humanitaire :</p>
+
+    <div class="cols-3">
+      <div class="box">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Niveau 1 — 70%</div>
+        <h4>Subventions &amp; Dons</h4>
+        <p>Financements institutionnels (UE, État, collectivités), fondations privées, dons de mécènes. Couvre 100 % des coûts Phase 1.</p>
+      </div>
+      <div class="box gold-bg">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Niveau 2 — 15%</div>
+        <h4>Contribution symbolique</h4>
+        <p>Pour les ménages qui le peuvent : 0,05–0,10 €/L réinjecté dans un fonds local de solidarité hydrique. Phase 2 uniquement.</p>
+      </div>
+      <div class="box teal-bg">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px;">Niveau 3 — 15%</div>
+        <h4>Mécénat d'entreprise</h4>
+        <p>Partenariats RSE, naming de points de distribution, visibilité médiatique portée par l'ambassadeur potentiel du programme.</p>
+      </div>
+    </div>
+    <div class="box navy-bg" style="margin-top:6px;">
+      <p><strong>Transition vers l'autonomie :</strong> À partir de la Phase 3, les structures locales formées génèrent des recettes propres modestes. Objectif à 5 ans : auto-financement partiel à 40 %, réduisant progressivement la dépendance aux financements extérieurs.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">06</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 7 — FRANCIS NGANNOU & COMMUNICATION
+══════════════════════════════════════════════ -->
+<div class="page dark-section">
+  <div class="page-header" style="background:rgba(6,16,26,0.98);">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Ambassadeur &amp; Communication</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 11 – 12</span></div>
+    <h1 class="st">Francis Ngannou &amp; <em style="font-style:normal;color:var(--gold-light);">stratégie de communication</em></h1>
+
+    <div class="callout">
+      <p><strong>Note :</strong> Francis Ngannou est identifié comme ambassadeur potentiel de premier plan pour ce programme. Son implication n'est pas confirmée à ce stade et fera l'objet d'une démarche formelle initiée par AIDE Fédération.</p>
+    </div>
+
+    <div class="cols-2" style="margin-top:10px;">
+      <div>
+        <div class="rep-card" style="margin-bottom:8px;">
+          <div class="rep-card-tag">Ambassadeur potentiel</div>
+          <div class="rep-name">Francis Ngannou</div>
+          <div class="rep-role">Champion du monde MMA · Militant humanitaire · Afrique</div>
+          <div class="rep-desc">Originaire du Cameroun, ancien champion UFC, Francis Ngannou a lui-même vécu dans l'enfance des conditions d'accès à l'eau précaires. Sa trajectoire et son engagement pour les causes humanitaires africaines font de lui un ambassadeur idéal — à la fois crédible, authentique et à rayonnement mondial.</div>
+        </div>
+
+        <h3>Valeur ajoutée pour le programme</h3>
+        <div class="data-card" style="margin-bottom:4px;">
+          <span class="data-card-label">Audience réseaux sociaux (Instagram, X, YouTube)</span>
+          <span class="data-card-val gold">30M+</span>
+        </div>
+        <div class="data-card" style="margin-bottom:4px;">
+          <span class="data-card-label">Notoriété internationale — Afrique &amp; diasporas</span>
+          <span class="data-card-val" style="color:white;">Globale</span>
+        </div>
+        <div class="data-card">
+          <span class="data-card-label">Multiplicateur potentiel sur le mécénat d'entreprise</span>
+          <span class="data-card-val gold">×3–5</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Formes d'implication envisagées</h3>
+        <div class="box teal-bg" style="margin-bottom:6px;">
+          <h4>Parrainage de lancement</h4>
+          <p>Participation à l'événement de lancement officiel (présentiel ou visio), message vidéo d'appel au soutien diffusé nationalement.</p>
+        </div>
+        <div class="box gold-bg" style="margin-bottom:6px;">
+          <h4>Ambassade digitale</h4>
+          <p>Posts réguliers relayant les avancées du programme, témoignages de bénéficiaires, appels aux dons sur tous ses réseaux.</p>
+        </div>
+        <div class="box" style="margin-bottom:6px;">
+          <h4>Mobilisation de mécènes</h4>
+          <p>Sollicitation de son réseau sportif et entrepreneurial international pour le mécénat d'entreprise.</p>
+        </div>
+        <div class="box navy-bg">
+          <h4>Visite terrain (si possible)</h4>
+          <p><strong>Visite à Mayotte</strong> pour renforcer la couverture médiatique et la légitimité du programme auprès des populations et des institutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-div"><span>Stratégie de communication — Section 12</span></div>
+    <div class="cols-3">
+      <div class="rep-card">
+        <div class="rep-card-tag">Canal 01</div>
+        <div class="rep-name" style="font-size:0.8rem;">Médias &amp; Relations Presse</div>
+        <div class="rep-desc">Conférence de presse de lancement · Communiqués réguliers · Documentaire court sur les bénéficiaires · Partenariats RFO Mayotte et médias outre-mer</div>
+      </div>
+      <div class="rep-card">
+        <div class="rep-card-tag">Canal 02</div>
+        <div class="rep-name" style="font-size:0.8rem;">Réseaux Sociaux</div>
+        <div class="rep-desc">Hashtag dédié #WaterForMayotte · Stories et Reels terrain hebdomadaires · Live depuis les points de distribution · Contenu ambassadeur</div>
+      </div>
+      <div class="rep-card">
+        <div class="rep-card-tag">Canal 03</div>
+        <div class="rep-name" style="font-size:0.8rem;">Plaidoyer Institutionnel</div>
+        <div class="rep-desc">Présentations aux instances européennes · Forums ONU Eau et ODD · Lobbying parlementaires ultramarins · Rapports d'impact aux financeurs</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer" style="background:rgba(6,16,26,0.98);">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">07</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 8 — PARTENAIRES & FINANCEMENT
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Partenaires &amp; Financement</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 13 – 14</span></div>
+    <h1 class="st">Partenaires &amp; <span>sources de financement</span></h1>
+
+    <p style="margin-bottom:8px;font-style:italic;font-size:0.75rem;color:var(--gray-400);">Les partenariats mentionnés constituent des pistes identifiées. Aucun n'est confirmé à ce stade ; leur engagement fera l'objet de démarches formelles d'AIDE Fédération.</p>
+
+    <div class="partner-grid">
+      <div class="partner-card">
+        <div class="p-type">Institutionnel France</div>
+        <div class="p-name">Préfecture de Mayotte</div>
+        <div class="p-role">Coordination territoriale, accès données, soutien logistique</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Institutionnel France</div>
+        <div class="p-name">Conseil Départemental</div>
+        <div class="p-role">Cofinancement, facilitation des autorisations, relais communautaire</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Santé</div>
+        <div class="p-name">ARS Océan Indien</div>
+        <div class="p-role">Contrôle qualité eau, données sanitaires, appui protocoles</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Europe</div>
+        <div class="p-name">Commission Européenne (ECHO)</div>
+        <div class="p-role">Financement aide humanitaire d'urgence</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Nations Unies</div>
+        <div class="p-name">UNICEF France</div>
+        <div class="p-role">Expertise eau-assainissement, plaidoyer, cofinancement potentiel</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Nations Unies</div>
+        <div class="p-name">OMS / Bureau Afrique</div>
+        <div class="p-role">Standards qualité eau, appui technique, validation protocoles</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Fondation privée</div>
+        <div class="p-name">Fondation de France</div>
+        <div class="p-role">Appel à projets "Eau et Assainissement", mécénat collectif</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Fondation privée</div>
+        <div class="p-name">Fondation Veolia</div>
+        <div class="p-role">Expertise technique eau, soutien financier et en nature</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Industrie</div>
+        <div class="p-name">Tetra Pak / équivalent</div>
+        <div class="p-role">Fourniture conditionnement carton, partenariat RSE</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Opérationnel local</div>
+        <div class="p-name">Associations mahoraises</div>
+        <div class="p-role">Distribution, identification bénéficiaires, lien communautaire</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Recherche</div>
+        <div class="p-name">Université de La Réunion</div>
+        <div class="p-role">Évaluation, recherche sur la résilience hydrique insulaire</div>
+      </div>
+      <div class="partner-card">
+        <div class="p-type">Médias</div>
+        <div class="p-name">RFO Mayotte</div>
+        <div class="p-role">Couverture, sensibilisation grand public, relais communication</div>
+      </div>
+    </div>
+
+    <div class="sec-div" style="margin-top:8px;"><span>Sources de financement — Section 14</span></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Mécanisme</th>
+          <th>Montant potentiel</th>
+          <th>Probabilité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-label">Commission Européenne (ECHO)</td><td>Aide humanitaire d'urgence</td><td>200 000 – 500 000 €</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+        <tr><td class="td-label">FEDER / FSE+ Mayotte</td><td>Programme opérationnel Mayotte 2021–2027</td><td>150 000 – 400 000 €</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+        <tr><td class="td-label">État français (ANCT / BOP 123)</td><td>Plan Eau Outre-mer, fonds ultramarins</td><td>100 000 – 250 000 €</td><td><span class="risk-badge risk-low">Élevée</span></td></tr>
+        <tr><td class="td-label">Conseil Départemental de Mayotte</td><td>Subvention directe, appel à projets social</td><td>50 000 – 150 000 €</td><td><span class="risk-badge risk-low">Élevée</span></td></tr>
+        <tr><td class="td-label">Fondation de France</td><td>Appel à projets eau / urgence</td><td>50 000 – 100 000 €</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+        <tr><td class="td-label">Fondation Veolia / Suez</td><td>Mécénat de compétences + soutien financier</td><td>50 000 – 150 000 €</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+        <tr><td class="td-label">Mécénat d'entreprise</td><td>Partenariat RSE, naming, communication associée</td><td>100 000 – 300 000 €</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+        <tr><td class="td-label">Collecte grand public</td><td>Crowdfunding, campagne ambassadeur</td><td>20 000 – 80 000 €</td><td><span class="risk-badge risk-low">Élevée</span></td></tr>
+        <tr><td class="td-label">UNICEF / Agences ONU</td><td>Cofinancement ou appui en nature</td><td>Variable / en nature</td><td><span class="risk-badge risk-med">Moyenne</span></td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><strong>Total mobilisable estimé (pilote 24 mois)</strong></td>
+          <td><strong>1 200 000 – 1 800 000 €</strong></td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">08</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 9 — BUDGET PILOTE
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Budget Pilote 24 mois</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Section 15 — Budget réaliste</span></div>
+    <h1 class="st">Budget pilote <span>24 mois</span></h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Poste de dépense</th>
+          <th>Phase 1 (M1–M6)</th>
+          <th>Phase 2 (M7–M18)</th>
+          <th>Phase 3 (M19–M24)</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-label">Eau potable conditionnée (carton)</td>
+          <td>120 000 €</td><td>240 000 €</td><td>80 000 €</td>
+          <td><strong>440 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Logistique, transport &amp; stockage</td>
+          <td>40 000 €</td><td>70 000 €</td><td>30 000 €</td>
+          <td><strong>140 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Ressources humaines (coord. + terrain)</td>
+          <td>55 000 €</td><td>110 000 €</td><td>55 000 €</td>
+          <td><strong>220 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Équipements points de distribution</td>
+          <td>20 000 €</td><td>60 000 €</td><td>20 000 €</td>
+          <td><strong>100 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Infrastructures résilience (Phase 3)</td>
+          <td>—</td><td>20 000 €</td><td>180 000 €</td>
+          <td><strong>200 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Formation acteurs locaux</td>
+          <td>15 000 €</td><td>30 000 €</td><td>25 000 €</td>
+          <td><strong>70 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Communication, événements, ambassadeur</td>
+          <td>25 000 €</td><td>40 000 €</td><td>20 000 €</td>
+          <td><strong>85 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Suivi-évaluation &amp; capitalisation</td>
+          <td>10 000 €</td><td>20 000 €</td><td>30 000 €</td>
+          <td><strong>60 000 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Frais généraux &amp; coordination siège (8 %)</td>
+          <td>23 200 €</td><td>47 200 €</td><td>34 400 €</td>
+          <td><strong>104 800 €</strong></td>
+        </tr>
+        <tr>
+          <td class="td-label">Provision imprévus (5 %)</td>
+          <td>14 500 €</td><td>29 500 €</td><td>21 500 €</td>
+          <td><strong>65 500 €</strong></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>TOTAL PAR PHASE</strong></td>
+          <td><strong>322 700 €</strong></td>
+          <td><strong>666 700 €</strong></td>
+          <td><strong>495 900 €</strong></td>
+          <td><strong>1 485 300 €</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Budget visual bar -->
+    <div style="margin:10px 0 6px;">
+      <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--gray-400);margin-bottom:4px;">
+        <span>Répartition par phase</span>
+        <span>Total : 1 485 300 €</span>
+      </div>
+      <div class="budget-bar" style="height:10px;">
+        <div class="budget-bar-seg" style="width:21.7%;background:#0B1623;"></div>
+        <div class="budget-bar-seg" style="width:44.8%;background:#1A2E48;"></div>
+        <div class="budget-bar-seg" style="width:33.4%;background:var(--teal);"></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:4px;">
+        <span style="font-size:9px;color:var(--gray-500);display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;background:#0B1623;border-radius:2px;display:inline-block;"></span>Phase 1 — 322 700 € (21.7%)</span>
+        <span style="font-size:9px;color:var(--gray-500);display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;background:#1A2E48;border-radius:2px;display:inline-block;"></span>Phase 2 — 666 700 € (44.8%)</span>
+        <span style="font-size:9px;color:var(--gray-500);display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;background:var(--teal);border-radius:2px;display:inline-block;"></span>Phase 3 — 495 900 € (33.4%)</span>
+      </div>
+    </div>
+
+    <div class="cols-2">
+      <div class="box gold-bg">
+        <p><strong>Budget total pilote 24 mois :</strong> environ <strong>1 485 000 €</strong><br>Fourchette : 1,2 M€ – 1,8 M€ selon options logistiques retenues.</p>
+      </div>
+      <div class="box teal-bg">
+        <p><strong>Coût unitaire estimé :</strong> entre <strong>14 et 22 € par personne et par an</strong> bénéficiant d'un accès à l'eau potable régulier dans le cadre du programme.</p>
+      </div>
+    </div>
+    <div class="box navy-bg" style="margin-top:6px;">
+      <p><strong>Note :</strong> Ces estimations sont basées sur les coûts logistiques constatés en Outre-mer français, les tarifs du conditionnement carton alimentaire et les benchmarks ONG en contextes insulaires comparables. Elles seront validées par une étude de faisabilité dédiée avant le lancement.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">09</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 10 — INDICATEURS, RISQUES & GOUVERNANCE
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Impact, Risques &amp; Gouvernance</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 16 – 18</span></div>
+    <h1 class="st">Indicateurs, <span>risques &amp; gouvernance</span></h1>
+
+    <table style="font-size:0.71rem;">
+      <thead>
+        <tr><th>Indicateur</th><th>Baseline</th><th>Cible M6</th><th>Cible M18</th><th>Cible M24</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Personnes avec accès régulier à eau potable</td><td>0</td><td>25 000</td><td>60 000</td><td>100 000</td></tr>
+        <tr><td>Litres distribués (cumulé)</td><td>0</td><td>500 000 L</td><td>2 000 000 L</td><td>4 000 000 L</td></tr>
+        <tr><td>Points de distribution actifs</td><td>0</td><td>3</td><td>10</td><td>15</td></tr>
+        <tr><td>Structures locales formées et opérationnelles</td><td>0</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td>Réduction consommation bouteilles plastique</td><td>Référence à établir</td><td>-10%</td><td>-30%</td><td>-50%</td></tr>
+        <tr><td>Incidents sanitaires liés à l'eau (zones cibles)</td><td>Référence ARS</td><td>-15%</td><td>-35%</td><td>-50%</td></tr>
+        <tr><td>Dispositifs de résilience installés</td><td>0</td><td>0</td><td>2</td><td>5</td></tr>
+        <tr><td>Taux de satisfaction bénéficiaires</td><td>—</td><td>≥75%</td><td>≥80%</td><td>≥85%</td></tr>
+        <tr><td>Couverture médiatique (articles/reportages)</td><td>0</td><td>10</td><td>30</td><td>50+</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-div"><span>Risques — Section 17</span></div>
+
+    <table style="font-size:0.71rem;">
+      <thead>
+        <tr><th>Risque</th><th>Niveau</th><th>Mesure d'atténuation</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Difficultés logistiques d'approvisionnement vers Mayotte</td>
+          <td><span class="risk-badge risk-high">Élevé</span></td>
+          <td>2–3 sources alternatives identifiées ; stock tampon 3 mois</td>
+        </tr>
+        <tr>
+          <td>Non-confirmation de l'ambassadeur (Ngannou)</td>
+          <td><span class="risk-badge risk-med">Moyen</span></td>
+          <td>Stratégie de communication indépendante ; ambassadeurs alternatifs</td>
+        </tr>
+        <tr>
+          <td>Retards ou refus des financeurs institutionnels</td>
+          <td><span class="risk-badge risk-high">Élevé</span></td>
+          <td>Diversification des sources ; démarrage sur fonds propres ou mécénat</td>
+        </tr>
+        <tr>
+          <td>Tensions sociales ou sécuritaires sur le territoire</td>
+          <td><span class="risk-badge risk-med">Moyen</span></td>
+          <td>Coordination étroite avec préfecture ; protocoles de sécurité terrain</td>
+        </tr>
+        <tr>
+          <td>Résistances communautaires ou politiques locales</td>
+          <td><span class="risk-badge risk-med">Moyen</span></td>
+          <td>Implication des leaders communautaires dès la conception du programme</td>
+        </tr>
+        <tr>
+          <td>Qualité insuffisante de l'eau conditionnée</td>
+          <td><span class="risk-badge risk-low">Faible</span></td>
+          <td>Certification obligatoire des fournisseurs ; contrôles qualité indépendants</td>
+        </tr>
+        <tr>
+          <td>Détournement ou mauvais ciblage des distributions</td>
+          <td><span class="risk-badge risk-med">Moyen</span></td>
+          <td>Système d'enregistrement numérique ; audit externe semestriel</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sec-div"><span>Gouvernance — Section 18</span></div>
+
+    <div class="cols-3">
+      <div class="box">
+        <h4>Comité de Pilotage</h4>
+        <p>AIDE Fédération (directeur), représentant Département, représentant financeurs principaux. Fréquence trimestrielle. Décisions stratégiques, validation budgétaire.</p>
+      </div>
+      <div class="box gold-bg">
+        <h4>Équipe Opérationnelle</h4>
+        <p>Coordinateur programme Mayotte, agents terrain, responsable logistique. Reporting mensuel au siège AIDE Fédération. Gestion quotidienne.</p>
+      </div>
+      <div class="box teal-bg">
+        <h4>Comité Bénéficiaires</h4>
+        <p>Représentants des communautés bénéficiaires et associations locales. Consultation trimestrielle. Remontée des besoins et évaluation qualitative.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025</span>
+    <span class="pn">10</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 11 — CALENDRIER & VISION INTERNATIONALE
+══════════════════════════════════════════════ -->
+<div class="page dark-section">
+  <div class="page-header" style="background:rgba(6,16,26,0.98);">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Federation Water Mayotte</span>
+    </div>
+    <span class="section-badge">Calendrier &amp; Vision Internationale</span>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow"><div class="eyebrow-bar"></div><span class="eyebrow-text">Sections 19 – 20</span></div>
+    <h1 class="st">Calendrier 24 mois &amp; <em style="font-style:normal;color:var(--gold-light);">vision internationale</em></h1>
+
+    <div class="cols-2">
+      <div>
+        <div class="timeline">
+          <div class="tl-item blue">
+            <div class="tl-date">Mois 1–2 · Préparation</div>
+            <div class="tl-text">Recrutement coordinateur, cartographie des zones prioritaires, sélection des fournisseurs, premiers partenariats locaux, infrastructure logistique.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Mois 3 · Lancement officiel</div>
+            <div class="tl-text">Événement de lancement public (Mayotte + Paris), conférence de presse, activation communication nationale, premières distributions d'urgence.</div>
+          </div>
+          <div class="tl-item blue">
+            <div class="tl-date">Mois 3–6 · Phase 1 opérationnelle</div>
+            <div class="tl-text">Distribution d'urgence auprès de 25 000 personnes, enregistrement bénéficiaires, suivi sanitaire hebdomadaire, premier rapport aux financeurs.</div>
+          </div>
+          <div class="tl-item teal">
+            <div class="tl-date">Mois 7–9 · Transition Phase 2</div>
+            <div class="tl-text">Ouverture des 5 premiers points de distribution solidaire, montée en compétences partenaires locaux, mise en place du suivi numérique.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Mois 10–18 · Phase 2 pleine capacité</div>
+            <div class="tl-text">10 points actifs, 60 000 personnes couvertes, exploration approvisionnement local, évaluation intermédiaire, rapport mi-programme.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">Mois 12 · Bilan intermédiaire</div>
+            <div class="tl-text">Évaluation externe indépendante, ajustement du dispositif, présentation aux financeurs, négociations pour la Phase 3 et extension du financement.</div>
+          </div>
+          <div class="tl-item teal">
+            <div class="tl-date">Mois 19–22 · Phase 3 — Résilience</div>
+            <div class="tl-text">Installation des 5 dispositifs de collecte/purification, formation des techniciens locaux, structuration des comités de l'eau communautaires.</div>
+          </div>
+          <div class="tl-item blue">
+            <div class="tl-date">Mois 23–24 · Clôture &amp; capitalisation</div>
+            <div class="tl-text">Évaluation finale indépendante, rapport de capitalisation, transfert progressif aux acteurs locaux, négociation de la phase d'extension.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Mois 24+ · Extension internationale</div>
+            <div class="tl-text">Démarrage des démarches de réplication dans un second territoire pilote (Comores, Haïti, Sahel) sur la base du modèle documenté.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-div"><span>Vision de déploiement international — Section 20</span></div>
+
+    <div class="cols-2">
+      <div>
+        <p>Mayotte constitue le territoire pilote idéal : crise documentée, ancrage dans la République française facilitant l'accès aux financements européens, dimension insulaire transposable à de nombreux contextes internationaux.</p>
+
+        <div class="cols-2" style="margin-top:8px;gap:6px;">
+          <div class="rep-card">
+            <div class="rep-card-tag">Comores</div>
+            <div class="rep-desc">Crise hydrique structurelle comparable, liens culturels et linguistiques avec Mayotte, tissu associatif existant.</div>
+          </div>
+          <div class="rep-card">
+            <div class="rep-card-tag">Haïti</div>
+            <div class="rep-desc">Déficit massif post-séismes, demande humanitaire chronique, présence ONG internationale déjà structurée.</div>
+          </div>
+          <div class="rep-card">
+            <div class="rep-card-tag">Sahel</div>
+            <div class="rep-desc">Stress hydrique extrême aggravé par le changement climatique et les conflits (Mali, Niger, Burkina Faso).</div>
+          </div>
+          <div class="rep-card">
+            <div class="rep-card-tag">DOM-COM</div>
+            <div class="rep-desc">Extension aux autres territoires ultramarins en tension hydrique (Guadeloupe, Saint-Martin, Polynésie).</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="callout" style="margin-bottom:8px;">
+          <p><strong>Critères de réplication :</strong> Opérateur local partenaire identifié, situation de crise documentée, financeur ancré dans le territoire, capacité logistique d'approvisionnement en conditionnement carton.</p>
+        </div>
+        <div class="box navy-bg" style="margin-bottom:8px;">
+          <p><strong>Ambition à 5 ans :</strong> AIDE FEDERATION WATER devient un programme de référence internationale reconnu ODD 6, opérationnel dans <strong>5 pays</strong>, ayant fourni un accès à l'eau potable à plus de <strong>500 000 personnes</strong>.</p>
+        </div>
+        <div class="quote-block" style="margin:0;background:rgba(201,147,58,0.08);border-color:var(--gold-light);">
+          <p>« Nous avons la responsabilité, la capacité et la légitimité pour agir. Mayotte est le miroir d'une crise mondiale que nous pouvons, ensemble, commencer à résoudre. »</p>
+          <cite>— AIDE Fédération, vision programmatique 2025–2030</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer" style="background:rgba(6,16,26,0.98);">
+    <span>AIDE FEDERATION WATER MAYOTTE — Dossier Institutionnel 2025 · Fin du dossier</span>
+    <span class="pn">11</span>
+  </div>
+</div>
+
+</body>
+</html>
