@@ -381,6 +381,74 @@ footer .g { color:var(--gold); }
   .impact-grid { grid-template-columns:1fr 1fr; }
   footer { flex-direction:column; gap:12px; text-align:center; }
 }
+
+/* ─── PRINT ────────────────────────────────────────────── */
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  @page { size: A4; margin: 14mm 14mm 14mm 14mm; }
+
+  nav { display: none !important; }
+  footer { display: none !important; }
+
+  /* Chaque section = nouvelle page */
+  section {
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-inside: avoid !important;
+  }
+  section.hero {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    min-height: unset !important;
+    padding: 48px 32px 40px !important;
+  }
+
+  /* Hero compact */
+  .hero {
+    background: linear-gradient(155deg,#06101A 0%,#0D1E33 50%,#0F2240 100%) !important;
+  }
+  .hero-title { font-size: 36px !important; }
+  .hero-sub { font-size: 14px !important; }
+  .hero-stats { gap: 16px !important; }
+
+  /* Sections légères */
+  .visuals-section,
+  .anchor-section,
+  .noborders-section,
+  .phase-section,
+  .amb-section,
+  .cta-section {
+    padding: 36px 32px !important;
+  }
+
+  /* Grilles adaptées print */
+  .visuals-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .visuals-grid .vis.main { grid-column: span 2 !important; }
+  .anchor-grid { grid-template-columns: 1fr 1fr !important; }
+  .amb-grid { grid-template-columns: 1fr 1fr !important; }
+  .enjeu-grid { grid-template-columns: 1fr 1fr !important; }
+  .territory-grid { grid-template-columns: repeat(3,1fr) !important; }
+  .impact-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .global-strip { grid-template-columns: repeat(4,1fr) !important; }
+
+  /* Phases côte à côte */
+  .phases-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* Images */
+  img { max-width: 100% !important; }
+  .vis img { height: 160px !important; object-fit: cover !important; }
+  .phase-vis img { height: 140px !important; object-fit: cover !important; }
+
+  /* Proposal boxes */
+  .prop-list { columns: 2 !important; gap: 12px !important; }
+  .prop-item { break-inside: avoid !important; }
+
+  /* Blobs & décos — invisibles print */
+  .blob, .grid-bg, .b1, .b2, .b3 { display: none !important; }
+
+  /* Couleurs forcées */
+  body { background: #0B1623 !important; color: #fff !important; }
+}
 </style>
 </head>
 <body>

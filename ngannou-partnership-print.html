@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AIDE Fédération Water — Proposition de Partenariat Francis Ngannou</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #0B1623;
+  --navy-2:     #122035;
+  --navy-3:     #1A2E48;
+  --gold:       #C9933A;
+  --gold-light: #E8B45A;
+  --white:      #ffffff;
+  --paper:      #F8F9FB;
+  --gray-100:   #F1F5F9;
+  --gray-200:   #E2E8F0;
+  --gray-400:   #94A3B8;
+  --gray-500:   #64748B;
+  --text:       #0F172A;
+  --red:        #C0392B;
+  --water:      #0EA5E9;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Satoshi',-apple-system,sans-serif; background:#d4d8de; color:var(--text); }
+
+@page { size: A4; margin: 0; }
+
+/* ─── PAGE ─── */
+.page {
+  width: 210mm; min-height: 297mm; height: 297mm;
+  background: var(--white);
+  position: relative; overflow: hidden;
+  margin: 0 auto 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  display: flex; flex-direction: column;
+}
+.page.dark { background: var(--navy); }
+
+/* ─── HEADER / FOOTER ─── */
+.ph {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 22px; height: 42px;
+  background: rgba(11,22,35,0.98);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.ph .brand { display:flex; align-items:center; gap:8px; }
+.ph img { height: 24px; }
+.ph .divider { width:1px; height:16px; background:rgba(255,255,255,0.14); }
+.ph .doc-title { font-size:9.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+.ph .badge { font-size:8.5px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-light); background:rgba(201,147,58,.12); border:1px solid rgba(201,147,58,.2); padding:3px 9px; border-radius:5px; }
+
+.pf {
+  height: 30px; background: var(--navy);
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 0 22px; flex-shrink: 0;
+}
+.pf span { font-size:8px; letter-spacing:.08em; color:rgba(255,255,255,.22); }
+.pf .pn { font-size:8.5px; font-weight:700; color:var(--gold); }
+
+/* ─── CONTENT ─── */
+.content { flex:1; padding:20px 26px 16px; overflow:hidden; display:flex; flex-direction:column; }
+
+/* ─── EYEBROW ─── */
+.ey { display:inline-flex; align-items:center; gap:9px; margin-bottom:8px; }
+.ey-bar { width:18px; height:1px; background:var(--gold); }
+.ey-txt { font-size:8.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+.ey-txt.lt { color:rgba(255,255,255,.45); }
+
+/* ─── TITLES ─── */
+h1.st { font-size:1.5rem; font-weight:700; letter-spacing:-.03em; color:var(--navy); line-height:1.1; margin-bottom:12px; }
+h1.st span { color:var(--gold); }
+h1.st.lt { color:white; }
+h2.st { font-size:1.1rem; font-weight:700; letter-spacing:-.02em; color:var(--navy); line-height:1.15; margin-bottom:10px; }
+h2.st.lt { color:white; }
+h2.st span { color:var(--gold); }
+h3 { font-size:.8rem; font-weight:700; color:var(--navy); margin:10px 0 4px; }
+h3.lt { color:white; }
+
+/* ─── BODY TEXT ─── */
+p { font-size:.78rem; color:var(--gray-500); line-height:1.7; margin-bottom:6px; }
+p strong { color:var(--navy); font-weight:700; }
+p.lt { color:rgba(255,255,255,.6); }
+p.lt strong { color:white; }
+ul { padding-left:13px; margin-bottom:6px; }
+ul li { font-size:.76rem; color:var(--gray-500); margin-bottom:3px; line-height:1.5; }
+ul li::marker { color:var(--gold); }
+
+/* ─── GRID HELPERS ─── */
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.grid-4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:9px; }
+.grid-2-3 { display:grid; grid-template-columns:2fr 3fr; gap:16px; }
+.grid-3-2 { display:grid; grid-template-columns:3fr 2fr; gap:16px; }
+
+/* ─── CALLOUT ─── */
+.callout { background:var(--gray-100); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:12px; }
+.callout.dark { background:rgba(201,147,58,.08); border-left:3px solid var(--gold); }
+.callout p { margin:0; }
+
+/* ─── STAT BLOCK ─── */
+.stat-block { text-align:center; padding:12px 8px; }
+.stat-val { font-size:1.8rem; font-weight:700; letter-spacing:-.04em; line-height:1; }
+.stat-val.gold { color:var(--gold); }
+.stat-val.red  { color:var(--red); }
+.stat-val.water{ color:var(--water); }
+.stat-val.lt   { color:white; }
+.stat-scope { font-size:7.5px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gray-400); margin-bottom:4px; }
+.stat-desc { font-size:.68rem; color:var(--gray-500); line-height:1.4; margin-top:4px; }
+.stat-desc.lt { color:rgba(255,255,255,.45); }
+
+/* ─── DATA ROW ─── */
+.data-row { display:flex; align-items:center; justify-content:space-between; padding:7px 12px; border-bottom:1px solid var(--gray-100); }
+.data-row:last-child { border:none; }
+.data-row-label { font-size:.73rem; color:var(--gray-500); }
+.data-row-val { font-size:.82rem; font-weight:700; }
+.data-row-val.red   { color:var(--red); }
+.data-row-val.gold  { color:var(--gold); }
+.data-row-val.water { color:var(--water); }
+.data-row-val.navy  { color:var(--navy); }
+
+/* ─── CARD ─── */
+.card { border:1px solid var(--gray-200); border-radius:11px; padding:12px 14px; }
+.card.dark { background:var(--navy-2); border:1px solid rgba(255,255,255,.07); }
+.card.gold-outline { background:rgba(201,147,58,.06); border:1px solid rgba(201,147,58,.2); border-radius:11px; padding:12px 14px; }
+
+/* ─── PHASE ─── */
+.phase-badge { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.7rem; font-weight:700; flex-shrink:0; }
+.ph-badge-1 { background:rgba(201,147,58,.15); color:var(--gold); }
+.ph-badge-2 { background:rgba(14,165,233,.12); color:var(--water); }
+.ph-badge-3 { background:rgba(13,148,136,.12); color:#0D9488; }
+.phase-row { display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--gray-100); }
+.phase-row:last-child { border:none; }
+.phase-title-txt { font-size:.78rem; font-weight:700; color:var(--navy); margin-bottom:3px; }
+.phase-period-txt { font-size:.7rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+.phase-desc-txt { font-size:.72rem; color:var(--gray-500); line-height:1.55; }
+
+/* ─── TERRITORY CARD ─── */
+.terr { border-radius:10px; padding:10px 12px; border:1px solid rgba(255,255,255,.07); background:rgba(255,255,255,.03); }
+.terr.active { background:rgba(201,147,58,.1); border:1px solid rgba(201,147,58,.28); }
+.terr-flag { font-size:1.2rem; display:block; margin-bottom:5px; }
+.terr-name { font-size:.75rem; font-weight:700; color:white; margin-bottom:3px; }
+.terr-status { font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.35); }
+.terr.active .terr-status { color:var(--gold-light); }
+.terr-desc { font-size:.66rem; color:rgba(255,255,255,.4); line-height:1.45; margin-top:5px; }
+
+/* ─── PROPOSAL ITEM ─── */
+.prop-item { display:flex; gap:11px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--gray-100); }
+.prop-item:last-child { border:none; }
+.prop-num { font-size:.65rem; font-weight:700; color:var(--gold); background:rgba(201,147,58,.1); border:1px solid rgba(201,147,58,.2); border-radius:5px; padding:3px 7px; flex-shrink:0; }
+.prop-title-txt { font-size:.76rem; font-weight:700; color:var(--navy); margin-bottom:2px; }
+.prop-desc-txt { font-size:.72rem; color:var(--gray-500); line-height:1.5; }
+
+/* ─── IMAGE BLOCK ─── */
+.img-block { border-radius:10px; overflow:hidden; position:relative; background:var(--navy-3); }
+.img-block img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ─── QUOTE ─── */
+.quote-block { border-left:3px solid var(--gold); padding:10px 14px; margin:12px 0; background:rgba(201,147,58,.04); border-radius:0 8px 8px 0; }
+.quote-block p { font-size:.78rem; font-style:italic; color:var(--navy); font-weight:500; margin:0 0 4px; }
+.quote-block cite { font-size:.68rem; color:var(--gold); font-style:normal; font-weight:700; letter-spacing:.06em; }
+
+/* ─── DARK SECTION BLOBS ─── */
+.blob-1 { position:absolute; width:320px; height:320px; border-radius:50%; background:radial-gradient(circle,rgba(26,86,219,.18) 0%,transparent 70%); filter:blur(70px); top:-80px; right:-60px; pointer-events:none; }
+.blob-2 { position:absolute; width:220px; height:220px; border-radius:50%; background:radial-gradient(circle,rgba(201,147,58,.14) 0%,transparent 70%); filter:blur(60px); bottom:-40px; left:-40px; pointer-events:none; }
+
+/* ─── COVER PAGE ─── */
+.cover-wrap { flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:36px 32px 24px; background:linear-gradient(155deg,#06101A 0%,#0D1E33 45%,#0F2240 100%); }
+.cover-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
+.cover-line { width:28px; height:1px; background:var(--gold); }
+.cover-eye-txt { font-size:9px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.cover-separator { width:32px; height:1px; background:rgba(255,255,255,.12); }
+.cover-label { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-light); }
+.cover-hero { flex:1; display:flex; flex-direction:column; justify-content:center; }
+.cover-title { font-size:3.2rem; font-weight:700; letter-spacing:-.04em; color:white; line-height:1.0; margin-bottom:20px; }
+.cover-title span { color:var(--gold); display:block; }
+.cover-sub { font-size:.95rem; color:rgba(255,255,255,.6); line-height:1.65; max-width:360px; margin-bottom:28px; }
+.cover-pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+.cover-pill { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:rgba(255,255,255,.55); padding:4px 12px; border-radius:6px; }
+.cover-pill.gold { background:rgba(201,147,58,.12); border-color:rgba(201,147,58,.3); color:var(--gold-light); }
+.cover-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden; margin-top:auto; }
+.cover-stat { padding:14px 10px; border-right:1px solid rgba(255,255,255,.08); text-align:center; }
+.cover-stat:last-child { border:none; }
+.cover-stat-val { font-size:1.5rem; font-weight:700; letter-spacing:-.04em; }
+.cover-stat-val.red { color:var(--red); }
+.cover-stat-val.gold { color:var(--gold); }
+.cover-stat-val.water { color:var(--water); }
+.cover-stat-val.white { color:white; }
+.cover-stat-scope { font-size:6.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:4px; }
+.cover-stat-desc { font-size:.62rem; color:rgba(255,255,255,.4); line-height:1.4; margin-top:4px; }
+.cover-img { width:100%; height:200px; border-radius:12px; overflow:hidden; margin-bottom:20px; }
+.cover-img img { width:100%; height:100%; object-fit:cover; }
+
+/* ─── PRINT ─── */
+@media print {
+  * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  body { background:none !important; }
+  .page { margin:0 !important; box-shadow:none !important; page-break-after:always !important; break-after:page !important; height:297mm !important; min-height:unset !important; }
+  .page:last-child { page-break-after:avoid !important; break-after:avoid !important; }
+}
+</style>
+</head>
+<body>
+
+
+<!-- ══════════════════════════════════
+     PAGE 1 — COUVERTURE
+══════════════════════════════════ -->
+<div class="page dark">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">Proposition de Partenariat · Confidentiel</span>
+    </div>
+    <span class="badge">2025 — 2026</span>
+  </div>
+
+  <div class="cover-wrap">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+
+    <div class="cover-eyebrow">
+      <div class="cover-line"></div>
+      <span class="cover-eye-txt">AIDE Fédération Water</span>
+      <div class="cover-separator"></div>
+      <span class="cover-label">À l'attention de l'équipe de Francis Ngannou</span>
+    </div>
+
+    <div class="cover-hero">
+      <div class="cover-title">
+        Mayotte.<br>Le début.
+        <span>Pas la limite.</span>
+      </div>
+      <p class="cover-sub">Un programme humanitaire qui part d'une île française pour atteindre le monde entier.</p>
+      <div class="cover-pills">
+        <span class="cover-pill gold">Phase 1 · Mayotte &amp; Madagascar</span>
+        <span class="cover-pill">Zéro plastique</span>
+        <span class="cover-pill">Résilience hydrique</span>
+        <span class="cover-pill">ODD 6</span>
+      </div>
+    </div>
+
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <div class="cover-stat-scope">Mayotte &amp; Madagascar · Phase 1</div>
+        <div class="cover-stat-val red">30%</div>
+        <div class="cover-stat-desc">de la pop. sans eau potable régulière</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-scope">Objectif pilote · 24 mois</div>
+        <div class="cover-stat-val gold">100 K+</div>
+        <div class="cover-stat-desc">personnes touchées dès la Phase 1–2</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-scope">Monde · 2024</div>
+        <div class="cover-stat-val water">2,2 Md</div>
+        <div class="cover-stat-desc">sans eau potable sûre sur Terre</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-scope">Vision · 6 ans</div>
+        <div class="cover-stat-val white">5 pays</div>
+        <div class="cover-stat-desc">avec le modèle répliqué sur 3 continents</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — À l'attention de l'équipe de Francis Ngannou</span>
+    <span class="pn">01</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 2 — CONTEXTE : MAYOTTE & MADAGASCAR
+══════════════════════════════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Contexte</span>
+  </div>
+
+  <div class="content">
+    <div class="ey"><div class="ey-bar"></div><span class="ey-txt">Chapitre 1 — Mayotte &amp; Madagascar</span></div>
+    <h1 class="st">Deux territoires.<br><span>Une seule urgence.</span></h1>
+
+    <p>La Phase 1 du programme se déploie simultanément à <strong>Mayotte</strong> et à <strong>Madagascar</strong> — deux territoires de l'Océan Indien aux crises hydriques complémentaires, et au potentiel de réplication mondial immédiat.</p>
+
+    <div class="grid-2" style="margin-top:14px; flex:1;">
+      <!-- Mayotte -->
+      <div>
+        <div style="background:var(--navy);border-radius:11px;padding:14px 16px;margin-bottom:10px;">
+          <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px;">🇫🇷 Mayotte — 101e département français</div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Population sans accès régulier à l'eau</span><span class="data-row-val red">30 %</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Taux de pauvreté — 1er rang européen</span><span class="data-row-val red">77 %</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Habitat sans raccordement réseau</span><span class="data-row-val gold">40 %</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Part revenu dépensée en eau plastique</span><span class="data-row-val gold">15–20 %</span></div>
+          <div class="data-row" style="border:none;"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Saison sèche — stress hydrique</span><span class="data-row-val" style="color:var(--water);">7 mois</span></div>
+        </div>
+        <div class="card gold-outline">
+          <p style="font-size:.72rem;margin:0;"><strong>Atout clé :</strong> Territoire de droit français — accès aux financements UE (FEDER, ECHO) et État. Crise documentée, crédibilité financeurs immédiate.</p>
+        </div>
+      </div>
+
+      <!-- Madagascar -->
+      <div>
+        <div style="background:var(--navy);border-radius:11px;padding:14px 16px;margin-bottom:10px;">
+          <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px;">🇲🇬 Madagascar — 4e île du monde</div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Population sans eau potable sécurisée</span><span class="data-row-val red">50 %</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Habitants</span><span class="data-row-val gold">28 M</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Accès eau zones rurales</span><span class="data-row-val red">30 %</span></div>
+          <div class="data-row"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Mortalité infantile liée à l'eau</span><span class="data-row-val red">Élevée</span></div>
+          <div class="data-row" style="border:none;"><span class="data-row-label" style="color:rgba(255,255,255,.55);">Classement IDH</span><span class="data-row-val" style="color:var(--water);">Top 10 pauvres</span></div>
+        </div>
+        <div class="card gold-outline">
+          <p style="font-size:.72rem;margin:0;"><strong>Atout clé :</strong> Complémentarité géographique avec Mayotte, logistique commune Océan Indien. Réseau AIDE Fédération actif, partenaires locaux identifiés.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:12px;">
+      <p><strong>Ce qui fonctionne à Mayotte et Madagascar</strong> fonctionnera à Port-au-Prince, à Conakry, à Bamako. Le modèle est conçu dès l'origine pour voyager.</p>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">02</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 3 — VISION GLOBALE & TERRITOIRES
+══════════════════════════════════ -->
+<div class="page dark">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Vision Globale</span>
+  </div>
+
+  <div class="content" style="background:linear-gradient(155deg,#06101A 0%,#0D1E33 50%,#0F2240 100%);">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;flex:1;">
+      <div class="ey"><div class="ey-bar"></div><span class="ey-txt lt">L'eau n'a pas de frontières</span></div>
+      <h1 class="st lt" style="font-size:2rem;margin-bottom:16px;">2,2 milliards.<br><span>Une seule réponse.</span></h1>
+
+      <div class="grid-4" style="margin-bottom:18px;">
+        <div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:6.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;">Monde · 2024</div>
+          <div style="font-size:1.5rem;font-weight:700;color:var(--water);letter-spacing:-.04em;">2,2 Md</div>
+          <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:4px;line-height:1.4;">sans eau potable sûre sur Terre</div>
+        </div>
+        <div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:6.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;">Afrique sub-sah.</div>
+          <div style="font-size:1.5rem;font-weight:700;color:var(--gold);letter-spacing:-.04em;">58 %</div>
+          <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:4px;line-height:1.4;">de la population sans accès sécurisé</div>
+        </div>
+        <div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:6.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;">Mortalité · /jour</div>
+          <div style="font-size:1.5rem;font-weight:700;color:var(--red);letter-spacing:-.04em;">1 000</div>
+          <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:4px;line-height:1.4;">enfants meurent de maladies hydriques</div>
+        </div>
+        <div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);">
+          <div style="font-size:6.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;">ODD 6 · 2030</div>
+          <div style="font-size:1.5rem;font-weight:700;color:white;letter-spacing:-.04em;">Hors</div>
+          <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:4px;line-height:1.4;">trajectoire selon ONU — alerte rouge</div>
+        </div>
+      </div>
+
+      <div style="font-size:8.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:12px;">Territoires — Phase 1 actifs &amp; extensions planifiées</div>
+      <div class="grid-3" style="flex:1;">
+        <div class="terr active">
+          <span class="terr-flag">🇫🇷</span>
+          <div class="terr-name">Mayotte</div>
+          <div class="terr-status">✦ Phase 1 — actif</div>
+          <div class="terr-desc">Département français. Financements UE. Programme en déploiement.</div>
+        </div>
+        <div class="terr active">
+          <span class="terr-flag">🇲🇬</span>
+          <div class="terr-name">Madagascar</div>
+          <div class="terr-status">✦ Phase 1 — actif</div>
+          <div class="terr-desc">4e île du monde. Déploiement simultané Phase 1. Partenaires locaux.</div>
+        </div>
+        <div class="terr">
+          <span class="terr-flag">🇰🇲</span>
+          <div class="terr-name">Comores</div>
+          <div class="terr-status">Extension prioritaire</div>
+          <div class="terr-desc">Archipel voisin, crise hydrique comparable, liens culturels forts.</div>
+        </div>
+        <div class="terr">
+          <span class="terr-flag">🇭🇹</span>
+          <div class="terr-name">Haïti</div>
+          <div class="terr-status">Extension prioritaire</div>
+          <div class="terr-desc">Déficit massif post-séismes, demande humanitaire chronique.</div>
+        </div>
+        <div class="terr">
+          <span class="terr-flag">🌍</span>
+          <div class="terr-name">Sahel</div>
+          <div class="terr-status">Extension stratégique</div>
+          <div class="terr-desc">Mali, Niger, Burkina — stress hydrique extrême.</div>
+        </div>
+        <div class="terr">
+          <span class="terr-flag">🌊</span>
+          <div class="terr-name">Pacifique</div>
+          <div class="terr-status">Extension à terme</div>
+          <div class="terr-desc">Îles menacées par la montée des eaux et salinisation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">03</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 4 — LES 3 PHASES
+══════════════════════════════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Programme</span>
+  </div>
+
+  <div class="content">
+    <div class="ey"><div class="ey-bar"></div><span class="ey-txt">Structure opérationnelle</span></div>
+    <h1 class="st">Le programme <span>en 3 phases</span></h1>
+
+    <div class="grid-2" style="flex:1;gap:14px;">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <!-- Phase 1 -->
+        <div style="background:var(--navy);border-radius:11px;padding:14px 16px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div class="phase-badge ph-badge-1">01</div>
+            <div>
+              <div class="phase-title-txt" style="color:white;">Urgence humanitaire</div>
+              <div class="phase-period-txt">Mois 1–6 · Mayotte &amp; Madagascar</div>
+            </div>
+          </div>
+          <p class="lt" style="font-size:.72rem;margin-bottom:8px;">Distribution directe d'eau potable en carton recyclable aux ménages les plus vulnérables. <strong style="color:white;">0 plastique.</strong> 25 000 personnes ciblées dès le premier mois sur les deux territoires.</p>
+          <ul style="margin:0;">
+            <li style="color:rgba(255,255,255,.55);font-size:.7rem;">Cartographie zones prioritaires — services sociaux &amp; communes</li>
+            <li style="color:rgba(255,255,255,.55);font-size:.7rem;">Eau certifiée en cartons (1 L / 5 L), zéro plastique</li>
+            <li style="color:rgba(255,255,255,.55);font-size:.7rem;">Formation volontaires locaux, suivi hebdomadaire terrain</li>
+            <li style="color:rgba(255,255,255,.55);font-size:.7rem;">Lancement campagne de communication nationale</li>
+          </ul>
+          <div style="margin-top:10px;display:flex;gap:8px;">
+            <div style="background:rgba(201,147,58,.12);border:1px solid rgba(201,147,58,.25);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:var(--gold);">25 000</div>
+              <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:2px;">personnes dès M1</div>
+            </div>
+            <div style="background:rgba(14,165,233,.08);border:1px solid rgba(14,165,233,.2);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:var(--water);">300–450 K€</div>
+              <div style="font-size:.62rem;color:rgba(255,255,255,.4);margin-top:2px;">budget estimé</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div style="background:var(--gray-100);border-radius:11px;padding:14px 16px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="phase-badge ph-badge-2">02</div>
+            <div>
+              <div class="phase-title-txt">Eau solidaire locale</div>
+              <div class="phase-period-txt">Mois 7–18 · Mayotte &amp; expansion</div>
+            </div>
+          </div>
+          <p style="font-size:.72rem;margin-bottom:6px;">10 points de distribution pérennes cogérés avec les acteurs communautaires. Approvisionnement local ou régional. <strong>60 000 personnes couvertes.</strong></p>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <div style="background:white;border:1px solid var(--gray-200);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:var(--water);">60 000</div>
+              <div style="font-size:.62rem;color:var(--gray-400);margin-top:2px;">personnes Phase 2</div>
+            </div>
+            <div style="background:white;border:1px solid var(--gray-200);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:var(--gold);">500–750 K€</div>
+              <div style="font-size:.62rem;color:var(--gray-400);margin-top:2px;">budget estimé</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <!-- Phase 3 -->
+        <div style="background:var(--gray-100);border-radius:11px;padding:14px 16px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="phase-badge ph-badge-3">03</div>
+            <div>
+              <div class="phase-title-txt">Résilience hydrique durable</div>
+              <div class="phase-period-txt">Mois 19–24+ · Mayotte → Monde</div>
+            </div>
+          </div>
+          <p style="font-size:.72rem;margin-bottom:6px;">Micro-stations de purification, collecte des eaux pluviales, comités locaux de l'eau. Capitalisation du modèle pour la réplication internationale.</p>
+          <ul style="margin:0 0 8px;">
+            <li>Installation micro-stations purification solaire</li>
+            <li>Comités locaux de l'eau — gouvernance communautaire</li>
+            <li>Documentation protocole — réplication 5 pays</li>
+          </ul>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <div style="background:white;border:1px solid var(--gray-200);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:#0D9488;">100 000+</div>
+              <div style="font-size:.62rem;color:var(--gray-400);margin-top:2px;">bénéficiaires directs</div>
+            </div>
+            <div style="background:white;border:1px solid var(--gray-200);border-radius:7px;padding:6px 10px;flex:1;text-align:center;">
+              <div style="font-size:1.1rem;font-weight:700;color:var(--gold);">680–900 K€</div>
+              <div style="font-size:.62rem;color:var(--gray-400);margin-top:2px;">budget estimé</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Budget total -->
+        <div class="card gold-outline">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-400);margin-bottom:4px;">Budget total pilote · 24 mois</div>
+              <div style="font-size:1.3rem;font-weight:700;color:var(--gold);letter-spacing:-.03em;">≈ 1 485 000 €</div>
+              <div style="font-size:.68rem;color:var(--gray-500);margin-top:2px;">Fourchette : 1,2 M€ – 1,8 M€</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:.68rem;color:var(--gray-500);">UE · État · Fondations</div>
+              <div style="font-size:.68rem;color:var(--gray-500);">Mécènes d'entreprise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">04</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 5 — VISUELS TERRAIN
+══════════════════════════════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Sur le terrain</span>
+  </div>
+
+  <div class="content">
+    <div class="ey"><div class="ey-bar"></div><span class="ey-txt">Mayotte &amp; Madagascar · Phase 1</span></div>
+    <h1 class="st" style="margin-bottom:14px;">Des familles qui sourient.<br><span>Parce que l'eau est là.</span></h1>
+
+    <!-- flex column — les images remplissent tout l'espace restant -->
+    <div style="display:flex;flex-direction:column;flex:1;gap:10px;min-height:0;">
+      <div class="img-block" style="flex:3;min-height:0;">
+        <img src="aide-water-visual-1.png" alt="Distribution AIDE Water"
+          onerror="this.parentElement.style.background='linear-gradient(135deg,#0B1623,#1A2E48)';this.style.display='none'">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,22,35,.85));padding:14px 16px 12px;">
+          <div style="font-size:7.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:3px;">Mayotte &amp; Madagascar · Phase 1</div>
+          <div style="font-size:.74rem;color:rgba(255,255,255,.85);">Distribution directe — conditionnement carton AIDE Fédération Water</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:2;min-height:0;">
+        <div class="img-block" style="height:100%;">
+          <img src="aide-water-visual-2.png" alt="Distribution solidaire"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#0D2A4A,#122035)';this.style.display='none'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,22,35,.85));padding:10px 12px;">
+            <div style="font-size:7px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:2px;">Zéro plastique</div>
+            <div style="font-size:.66rem;color:rgba(255,255,255,.75);">Circuit court, carton recyclable</div>
+          </div>
+        </div>
+        <div class="img-block" style="height:100%;">
+          <img src="aide-water-visual-3.png" alt="Familles bénéficiaires"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#0D1E33,#0F2240)';this.style.display='none'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,22,35,.85));padding:10px 12px;">
+            <div style="font-size:7px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:2px;">Résilience hydrique</div>
+            <div style="font-size:.66rem;color:rgba(255,255,255,.75);">Familles bénéficiaires — Océan Indien</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">05</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 6 — POURQUOI FRANCIS NGANNOU
+══════════════════════════════════ -->
+<div class="page dark">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">La Proposition</span>
+  </div>
+
+  <div class="content" style="background:linear-gradient(155deg,#06101A 0%,#0D1E33 50%,#0F2240 100%);">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;flex:1;">
+      <div class="ey"><div class="ey-bar"></div><span class="ey-txt lt">Pour Francis Ngannou</span></div>
+      <h1 class="st lt" style="font-size:1.8rem;margin-bottom:14px;">Un champion africain.<br><span>Un combat sans frontières.</span></h1>
+
+      <div class="grid-2-3" style="flex:1;gap:18px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="img-block" style="height:260px;">
+            <img src="francis-ngannou-foundation.jpg" alt="Francis Ngannou Foundation"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0D1E33,#1A2E48)';this.style.display='none'">
+          </div>
+          <div class="quote-block" style="background:rgba(201,147,58,.06);border-left:3px solid var(--gold);">
+            <p style="color:rgba(255,255,255,.75);">« Tu es né en Afrique. Tu vis dans le monde entier. Ce programme aussi. Il commence là où l'eau manque, et ne s'arrête jamais. »</p>
+            <cite>— AIDE Fédération</cite>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <p class="lt" style="font-size:.76rem;margin-bottom:4px;">Francis Ngannou est né à Batié, au Cameroun. Il a grandi dans des conditions que des millions d'Africains connaissent encore — l'accès difficile à l'eau, la précarité. Sa trajectoire n'est pas seulement sportive. <strong style="color:white;">C'est humaine.</strong></p>
+
+          <div style="display:flex;flex-direction:column;gap:8px;flex:1;">
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;">
+              <div style="font-size:1.2rem;font-weight:700;color:var(--gold);letter-spacing:-.03em;flex-shrink:0;min-width:44px;">30 M</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.45;">personnes qui l'écoutent — audience mondiale qui multiplie par 5 l'attractivité auprès des mécènes</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;">
+              <div style="font-size:1.2rem;font-weight:700;color:var(--water);letter-spacing:-.03em;flex-shrink:0;min-width:44px;">3 cts</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.45;">présence sur 3 continents — Afrique, Europe, Amérique du Nord — zones prioritaires du programme</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;">
+              <div style="font-size:1.2rem;font-weight:700;color:white;letter-spacing:-.03em;flex-shrink:0;min-width:44px;">IRL</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.45;">Francis Ngannou Foundation déjà active — infrastructure humanitaire existante, synergies directes</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;">
+              <div style="font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:-.03em;flex-shrink:0;min-width:44px;">+500%</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.45;">attractivité estimée auprès des mécènes corporate avec un ambassadeur de sa stature</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">06</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 7 — LES 5 FORMATS D'ENGAGEMENT
+══════════════════════════════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Formats d'engagement</span>
+  </div>
+
+  <div class="content">
+    <div class="ey"><div class="ey-bar"></div><span class="ey-txt">Ce que nous proposons</span></div>
+    <h1 class="st">5 façons de s'engager.<br><span>Ensemble.</span></h1>
+
+    <div class="grid-2" style="flex:1;gap:14px;">
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.1em;background:rgba(201,147,58,.1);border:1px solid rgba(201,147,58,.2);border-radius:5px;padding:3px 8px;color:var(--gold);flex-shrink:0;">01</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:3px;">Parrainage du lancement officiel</div>
+              <div style="font-size:.72rem;color:var(--gray-500);line-height:1.5;">Message vidéo ou présence physique à Paris et Mayotte pour le lancement médiatique du programme. Impact immédiat sur la collecte de fonds.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.1em;background:rgba(201,147,58,.1);border:1px solid rgba(201,147,58,.2);border-radius:5px;padding:3px 8px;color:var(--gold);flex-shrink:0;">02</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:3px;">Ambassadeur digital</div>
+              <div style="font-size:.72rem;color:var(--gray-500);line-height:1.5;">Partages réguliers sur les réseaux sociaux — stories, posts, vidéos terrain. Accès à son audience de 30 millions de personnes.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.1em;background:rgba(201,147,58,.1);border:1px solid rgba(201,147,58,.2);border-radius:5px;padding:3px 8px;color:var(--gold);flex-shrink:0;">03</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:3px;">Mécène fondateur</div>
+              <div style="font-size:.72rem;color:var(--gray-500);line-height:1.5;">Contribution financière personnelle ou via sa Fondation, avec contrepartie de visibilité et d'impact mesurable sur les bénéficiaires.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.1em;background:rgba(201,147,58,.1);border:1px solid rgba(201,147,58,.2);border-radius:5px;padding:3px 8px;color:var(--gold);flex-shrink:0;">04</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:3px;">Visite terrain</div>
+              <div style="font-size:.72rem;color:var(--gray-500);line-height:1.5;">Déplacement à Mayotte ou Madagascar pour ancrer le programme dans la réalité et générer une couverture médiatique internationale. Documentaire court.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.1em;background:rgba(201,147,58,.1);border:1px solid rgba(201,147,58,.2);border-radius:5px;padding:3px 8px;color:var(--gold);flex-shrink:0;">05</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:3px;">Co-pilote de l'extension africaine</div>
+              <div style="font-size:.72rem;color:var(--gray-500);line-height:1.5;">Francis Ngannou impliqué dans la stratégie de déploiement sur le continent africain — rôle actif dans la sélection des territoires prioritaires.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card gold-outline">
+          <div style="font-size:.72rem;color:var(--gray-500);line-height:1.6;">
+            <strong style="color:var(--navy);">Note :</strong> Les modalités précises seront co-construites lors d'une première rencontre. L'implication de Francis Ngannou n'est pas confirmée à ce stade. Ce document est confidentiel.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="img-block" style="height:220px;margin-top:14px;">
+      <img src="ngannou-2.png" alt="AIDE Fédération Water"
+        onerror="this.parentElement.style.background='linear-gradient(135deg,#0B1623,#1A2E48)';this.style.display='none'">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,22,35,.85));padding:14px 16px 12px;">
+        <div style="font-size:7.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:3px;">AIDE Fédération × Francis Ngannou</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.8);">Un partenariat pour changer des millions de vies — Mayotte, Madagascar et au-delà</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">07</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 8 — CONTACT & CTA
+══════════════════════════════════ -->
+<div class="page dark">
+  <div class="ph">
+    <div class="brand">
+      <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" onerror="this.style.opacity='0'">
+      <div class="divider"></div>
+      <span class="doc-title">AIDE Fédération Water — Partenariat Ngannou</span>
+    </div>
+    <span class="badge">Contact</span>
+  </div>
+
+  <div class="content" style="background:linear-gradient(155deg,#06101A 0%,#0D1E33 50%,#0F2240 100%);justify-content:center;align-items:center;text-align:center;">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+    <div style="position:relative;z-index:1;max-width:420px;margin:0 auto;">
+      <div class="ey" style="justify-content:center;"><div class="ey-bar"></div><span class="ey-txt lt">Prochaine étape</span><div class="ey-bar"></div></div>
+      <h1 class="st lt" style="font-size:2rem;margin-bottom:18px;text-align:center;">Rencontrons-nous.<br><span>L'eau n'attend pas.</span></h1>
+
+      <p class="lt" style="margin-bottom:28px;">AIDE Fédération est disponible pour une rencontre à Paris, à Mayotte ou à distance. Nous sommes prêts à répondre à toutes vos questions et à construire ce partenariat avec l'équipe de Francis Ngannou.</p>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 24px;margin-bottom:22px;text-align:left;">
+        <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;">Contacts AIDE Fédération</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(201,147,58,.12);border:1px solid rgba(201,147,58,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div style="font-size:.66rem;color:rgba(255,255,255,.35);margin-bottom:1px;">Email</div>
+              <div style="font-size:.76rem;font-weight:600;color:white;">contact@aide-federation.org</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(201,147,58,.12);border:1px solid rgba(201,147,58,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:.66rem;color:rgba(255,255,255,.35);margin-bottom:1px;">Site</div>
+              <div style="font-size:.76rem;font-weight:600;color:white;">mayotte.aide-federation.org</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:14px;margin-bottom:24px;">
+        <img src="logo-aide-federation-blanc.png" alt="AIDE Fédération" style="height:28px;opacity:.7;" onerror="this.style.display='none'">
+        <img src="logo-aide-onu.png" alt="ONU" style="height:22px;opacity:.45;" onerror="this.style.display='none'">
+        <img src="logo-aide-water.png" alt="AIDE Water" style="height:22px;opacity:.6;" onerror="this.style.display='none'">
+      </div>
+
+      <p style="font-size:.66rem;color:rgba(255,255,255,.2);line-height:1.6;">Document confidentiel — AIDE Fédération © 2025<br>À l'attention exclusive de l'équipe de Francis Ngannou</p>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>Document confidentiel — AIDE Fédération © 2025</span>
+    <span class="pn">08</span>
+  </div>
+</div>
+
+
+</body>
+</html>

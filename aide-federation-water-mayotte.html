@@ -781,8 +781,20 @@ tfoot td {
 
 /* ─── PRINT ─────────────────────────────────────────────── */
 @media print {
-  body { background: none; }
-  .page { margin: 0; box-shadow: none; page-break-after: always; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: none !important; margin: 0 !important; padding: 0 !important; }
+  .page {
+    margin: 0 !important;
+    box-shadow: none !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  .page:last-child { page-break-after: avoid !important; break-after: avoid !important; }
 }
 </style>
 </head>
