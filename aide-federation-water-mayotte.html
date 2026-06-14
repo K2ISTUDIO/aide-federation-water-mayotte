@@ -631,17 +631,36 @@ tfoot td {
 /* ─── COVER PAGE ─────────────────────────────────────────── */
 .cover-page {
   min-height: 297mm;
-  background: linear-gradient(155deg, #06101A 0%, #0D1E33 45%, #0F2240 100%);
+  background: #06101A;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 }
+.cover-bg-photo {
+  position: absolute; inset: 0;
+  background-image: url('phase1.png');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.28;
+  pointer-events: none;
+}
+.cover-bg-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    170deg,
+    rgba(6,16,26,0.55) 0%,
+    rgba(6,16,26,0.30) 35%,
+    rgba(6,16,26,0.65) 70%,
+    rgba(6,16,26,0.92) 100%
+  );
+  pointer-events: none;
+}
 .cover-grid-bg {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
   background-size: 56px 56px;
   pointer-events: none;
 }
@@ -805,6 +824,8 @@ tfoot td {
 ══════════════════════════════════════════════ -->
 <div class="page">
   <div class="cover-page">
+    <div class="cover-bg-photo"></div>
+    <div class="cover-bg-overlay"></div>
     <div class="cover-grid-bg"></div>
     <div class="cover-blob-1"></div>
     <div class="cover-blob-2"></div>
