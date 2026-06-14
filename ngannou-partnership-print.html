@@ -178,30 +178,31 @@ ul li::marker { color:var(--gold); }
 .cover-bg-overlay {
   position:absolute; inset:0;
   background: linear-gradient(
-    165deg,
-    rgba(6,16,26,0.45) 0%,
-    rgba(6,16,26,0.25) 30%,
-    rgba(6,16,26,0.7) 65%,
-    rgba(6,16,26,0.95) 100%
+    to bottom,
+    rgba(6,16,26,0.25) 0%,
+    rgba(6,16,26,0.15) 30%,
+    rgba(6,16,26,0.55) 58%,
+    rgba(6,16,26,0.88) 75%,
+    rgba(6,16,26,0.97) 100%
   );
   pointer-events: none;
 }
 
 /* ─── COVER PAGE ─── */
-.cover-wrap { flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:36px 32px 24px; }
-.cover-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
+.cover-wrap { flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:0 32px 28px; }
+.cover-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
 .cover-line { width:28px; height:1px; background:var(--gold); }
-.cover-eye-txt { font-size:9px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.45); }
-.cover-separator { width:32px; height:1px; background:rgba(255,255,255,.12); }
+.cover-eye-txt { font-size:9px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-separator { width:32px; height:1px; background:rgba(255,255,255,.18); }
 .cover-label { font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-light); }
-.cover-hero { flex:1; display:flex; flex-direction:column; justify-content:center; }
-.cover-title { font-size:3.2rem; font-weight:700; letter-spacing:-.04em; color:white; line-height:1.0; margin-bottom:20px; }
+.cover-hero { display:flex; flex-direction:column; }
+.cover-title { font-size:3.2rem; font-weight:700; letter-spacing:-.04em; color:white; line-height:1.0; margin-bottom:16px; }
 .cover-title span { color:var(--gold); display:block; }
-.cover-sub { font-size:.95rem; color:rgba(255,255,255,.6); line-height:1.65; max-width:360px; margin-bottom:28px; }
-.cover-pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+.cover-sub { font-size:.9rem; color:rgba(255,255,255,.6); line-height:1.65; max-width:380px; margin-bottom:20px; }
+.cover-pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
 .cover-pill { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:rgba(255,255,255,.55); padding:4px 12px; border-radius:6px; }
 .cover-pill.gold { background:rgba(201,147,58,.12); border-color:rgba(201,147,58,.3); color:var(--gold-light); }
-.cover-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden; margin-top:auto; }
+.cover-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden; }
 .cover-stat { padding:14px 10px; border-right:1px solid rgba(255,255,255,.08); text-align:center; }
 .cover-stat:last-child { border:none; }
 .cover-stat-val { font-size:1.5rem; font-weight:700; letter-spacing:-.04em; }
@@ -242,22 +243,18 @@ ul li::marker { color:var(--gold); }
   <div class="cover-bg-photo"></div>
   <div class="cover-bg-overlay"></div>
   <div class="cover-wrap">
-    <div class="blob-1"></div>
-    <div class="blob-2"></div>
-
-    <div class="cover-eyebrow">
-      <div class="cover-line"></div>
-      <span class="cover-eye-txt">AIDE Fédération Water</span>
-      <div class="cover-separator"></div>
-      <span class="cover-label">À l'attention de l'équipe de Francis Ngannou</span>
-    </div>
-
     <div class="cover-hero">
+      <div class="cover-eyebrow">
+        <div class="cover-line"></div>
+        <span class="cover-eye-txt">Proposition de partenariat · Confidentiel</span>
+        <div class="cover-separator"></div>
+        <span class="cover-label">À l'attention de Francis Ngannou</span>
+      </div>
       <div class="cover-title">
         Mayotte.<br>Le début.
         <span>Pas la limite.</span>
       </div>
-      <p class="cover-sub">Un programme humanitaire qui part d'une île française pour atteindre le monde entier.</p>
+      <p class="cover-sub">Un programme humanitaire qui part d'une île française pour atteindre le monde entier — et cherche un champion pour l'incarner.</p>
       <div class="cover-pills">
         <span class="cover-pill gold">Phase 1 · Mayotte &amp; Madagascar</span>
         <span class="cover-pill">Zéro plastique</span>
@@ -314,9 +311,30 @@ ul li::marker { color:var(--gold); }
     <div class="ey"><div class="ey-bar"></div><span class="ey-txt">Chapitre 1 — Mayotte &amp; Madagascar</span></div>
     <h1 class="st">Deux territoires.<br><span>Une seule urgence.</span></h1>
 
-    <p>La Phase 1 du programme se déploie simultanément à <strong>Mayotte</strong> et à <strong>Madagascar</strong> — deux territoires de l'Océan Indien aux crises hydriques complémentaires, et au potentiel de réplication mondial immédiat.</p>
+    <!-- Bloc d'introduction AIDE Fédération Water -->
+    <div style="background:linear-gradient(135deg,#06101A,#0D1E33);border-radius:12px;padding:16px 20px;margin-bottom:14px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-40px;right:-30px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(201,147,58,.14) 0%,transparent 70%);filter:blur(30px);pointer-events:none;"></div>
+      <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:10px;">Qui sommes-nous ?</div>
+      <p style="font-size:.76rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:10px;position:relative;z-index:1;"><strong style="color:white;">AIDE Fédération Water</strong> est un programme humanitaire porté par AIDE Fédération, association française engagée dans l'accès à l'eau potable pour les populations les plus vulnérables. Notre mission : distribuer de l'eau saine, sans plastique, en circuits courts — et construire des infrastructures de résilience hydrique durables là où l'État n'arrive pas.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;position:relative;z-index:1;">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--gold);margin-bottom:3px;">Notre modèle</div>
+          <div style="font-size:.66rem;color:rgba(255,255,255,.5);line-height:1.45;">Eau en carton recyclable, zéro plastique, distribution porte-à-porte avec les acteurs locaux</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--water);margin-bottom:3px;">Notre ancrage</div>
+          <div style="font-size:.66rem;color:rgba(255,255,255,.5);line-height:1.45;">Réseau de terrain à Mayotte et Madagascar, partenaires institutionnels UE et État identifiés</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;">
+          <div style="font-size:.68rem;font-weight:700;color:white;margin-bottom:3px;">Notre ambition</div>
+          <div style="font-size:.66rem;color:rgba(255,255,255,.5);line-height:1.45;">Répliquer le modèle sur 5 pays en 6 ans — avec un ambassadeur mondial pour l'incarner</div>
+        </div>
+      </div>
+    </div>
 
-    <div class="grid-2" style="margin-top:14px; flex:1;">
+    <p style="font-size:.74rem;color:var(--gray-500);margin-bottom:10px;">La <strong>Phase 1</strong> se déploie simultanément à <strong>Mayotte</strong> et <strong>Madagascar</strong> — deux territoires de l'Océan Indien aux crises hydriques complémentaires, avec un potentiel de réplication mondial immédiat.</p>
+
+    <div class="grid-2" style="margin-top:10px; flex:1;">
       <!-- Mayotte -->
       <div>
         <div style="background:var(--navy);border-radius:11px;padding:14px 16px;margin-bottom:10px;">
