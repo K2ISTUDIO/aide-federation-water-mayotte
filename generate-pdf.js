@@ -52,5 +52,12 @@ async function generatePDF(htmlFile, outputFile, opts = {}) {
     { margin: { top: '0', right: '0', bottom: '0', left: '0' } }
   );
 
+  // Version générique — sans ambassadeur nommé
+  await generatePDF(
+    'partnership-ambassadeur-print.html',
+    'AIDE-Federation-Water-Partnership-Ambassadeur.pdf',
+    { margin: { top: '0', right: '0', bottom: '0', left: '0' } }
+  );
+
   console.log('Terminé.');
 })();
